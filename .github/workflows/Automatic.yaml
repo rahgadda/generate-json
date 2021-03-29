@@ -1,0 +1,34 @@
+name: Automatic
+
+on: 
+  push:
+    branches:
+      - master
+    paths:
+      - data/*.hbs
+
+jobs:
+  build:
+    name: Automatic
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    
+    steps:
+      - name: Checking out code
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}  
+      - name: Change dir to action
+        working-directory: action
+        run: pwd; npm ci;  npm start
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Update by GithuActions'
+          author_email: gaddam.rahul@gmail.com
+          add: '*.json --force'
+          cwd: './response/'
