@@ -1,6 +1,11 @@
 name: Automatic
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - data/*.hbs
 
 jobs:
   build:
