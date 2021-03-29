@@ -1,23 +1,23 @@
 {
-  "users": [
+  "user": [
     {
       "id": 0,
-      "name": "Ian Leath",
-      "work": "Dynalab",
-      "email": "ian.leath@dynalab.org",
-      "dob": "1997",
-      "address": "84 Harvard Avenue",
-      "city": "London",
-      "optedin": true
+      "name": "Cory Mercer",
+      "work": "Acousticom",
+      "email": "cory.mercer@acousticom.club",
+      "dob": "1924",
+      "address": "29 Wall Street",
+      "city": "Charleston",
+      "optedin": false
     },
     {
       "id": 1,
-      "name": "Cyrus Dampier",
-      "work": "Creatonix",
-      "email": "cyrus.dampier@creatonix.eu",
-      "dob": "1964",
-      "address": "74 Albion Place",
-      "city": "Woodville",
+      "name": "Joslyn Coolidge",
+      "work": "Bellgate",
+      "email": "joslyn.coolidge@bellgate.gov",
+      "dob": "1957",
+      "address": "49 Cottontail Road",
+      "city": "Portsmouth",
       "optedin": false
     }
   ],
@@ -27,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": -16.76,
-    "y": 24.70
+    "x": -15.71,
+    "y": 18.25
   },
-  "price": "$36,000"
+  "price": "$73,521"
 }
