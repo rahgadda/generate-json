@@ -1,0 +1,16 @@
+{
+  "name": "action",
+  "version": "1.0.0",
+  "description": "Used to create JSON",
+  "main": "index.js",
+  "dependencies": {
+    "dummy-json": "^3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Rahul Kiran Gaddam",
+  "license": "ISC"
+}
