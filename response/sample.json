@@ -1,1 +1,34 @@
-"{\n  \"users\": [\n    {\n      \"id\": 0,\n      \"name\": \"Erik Raymond\",\n      \"work\": \"Haltheon\",\n      \"email\": \"erik.raymond@haltheon.net\",\n      \"dob\": \"1921\",\n      \"address\": \"7 Crawford Street\",\n      \"city\": \"Sudbury\",\n      \"optedin\": true\n    },\n    {\n      \"id\": 1,\n      \"name\": \"Alejandro Gamble\",\n      \"work\": \"Galcom\",\n      \"email\": \"alejandro.gamble@galcom.com\",\n      \"dob\": \"1997\",\n      \"address\": \"78 Mulholland Drive\",\n      \"city\": \"Manchester\",\n      \"optedin\": false\n    }\n  ],\n  \"images\": [\n    \"img0.png\",\n    \"img1.png\",\n    \"img2.png\"\n  ],\n  \"coordinates\": {\n    \"x\": -40.94,\n    \"y\": -2.11\n  },\n  \"price\": \"$90,710\"\n}"
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Rene Krumm",
+      "work": "OmniTouch",
+      "email": "rene.krumm@omnitouch.xyz",
+      "dob": "1955",
+      "address": "15 Harvard Avenue",
+      "city": "Kingston",
+      "optedin": false
+    },
+    {
+      "id": 1,
+      "name": "Liza Hollis",
+      "work": "Helixicon",
+      "email": "liza.hollis@helixicon.org",
+      "dob": "1958",
+      "address": "32 Paxton Street",
+      "city": "Auckland",
+      "optedin": true
+    }
+  ],
+  "images": [
+    "img0.png",
+    "img1.png",
+    "img2.png"
+  ],
+  "coordinates": {
+    "x": -0.74,
+    "y": 14.43
+  },
+  "price": "$47,223"
+}

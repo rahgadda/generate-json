@@ -35,6 +35,6 @@ function processJsonFile(fileName) {
 function hbs2Json(jsonData, fileName) {
     fs.writeFileSync(
         destinationFolderLocation + "/" + fileName.toString().replace('.hbs','.json'), 
-        JSON.stringify(jsonData),
+        jsonData,
         'utf-8');
 }
