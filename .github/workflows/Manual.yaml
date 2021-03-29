@@ -26,3 +26,10 @@ jobs:
       - name: Change dir to action
         working-directory: action
         run: pwd; npm ci;  npm start
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Update by GithuActions'
+          author_email: gaddam.rahul@gmail.com
+          add: '*.json --force'
+          cwd: './response/'
