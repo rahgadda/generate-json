@@ -4,23 +4,18 @@
   import Block from "svelte-atoms/Block.svelte";
   import DropZone from "svelte-atoms/DropZone.svelte";
 
-  let fileName = "";
-
+    let fileName = "";
     const onChange =  e =>  {
         const file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
         fileName = file ? file.name : "";
         const reader = new FileReader();
+        reader.readAsDataURL(file);
         reader.onloadend = () => {
-            // use a regex to remove data url part
             const base64String = reader.result
                 .replace("data:", "")
                 .replace(/^.+,/, "");
-
-            // log to console
-            // logs wL2dvYWwgbW9yZ...
             console.log(base64String);
         };
-        reader.readAsDataURL(file);
         
     };
 </script>
