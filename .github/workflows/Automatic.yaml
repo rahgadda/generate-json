@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - data/*.hbs
+      - data/**
 
 jobs:
   build:
