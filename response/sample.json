@@ -1,34 +1,74 @@
-{
-  "rahul": [
-    {
-      "id": 0,
-      "name": "Olivia Starck",
-      "work": "OpenServ",
-      "email": "olivia.starck@openserv.biz",
-      "dob": "1906",
-      "address": "3 Arlington Road",
-      "city": "Hastings",
-      "optedin": false
-    },
-    {
-      "id": 1,
-      "name": "Yuri Murphy",
-      "work": "Terralabs",
-      "email": "yuri.murphy@terralabs.xyz",
-      "dob": "1908",
-      "address": "44 Baker Street",
-      "city": "Wilmington",
-      "optedin": true
-    }
-  ],
-  "images": [
-    "img0.png",
-    "img1.png",
-    "img2.png"
-  ],
-  "coordinates": {
-    "x": 29.19,
-    "y": 18.47
-  },
-  "price": "$65,959"
-}
+FLEX_TABLE_TYPE_CD = User Defined Table Type -> Events
+ - EVENT_ACC_COLUMN_PARAMETER_CD
+   - User Defined Table
+     - 1  [Table Name] [Join Condition]
+     - or many [Table Name] [Join Condition]
+     - NULL/Blank
+
+ - EVENT_ACO_COLUMN_PARAMETER_CD
+    - User Defined Table
+     - 1 [Table Name] [Join Condition]
+     - or many [Table Name] [Join Condition]
+     - NULL/Blank
+
+
+Account
+--------
+1. Entity = Account
+2. Event = Account Create
+3. Criteria Table Type = EVENT ACCOUNTS PARAMETER CODE [EVENT_ACC_PARAMETER_CD]
+4. Response Table Type = EVENT ACCOUNTS CREATE RESPONSE PARAMETER
+5. Column Values Type = [EVENT_ACC_COLUMN_PARAMETER_CD]
+
+
+
+
+
+Account Condition
+-----------------
+1. Entity = Account
+2. Event = Account Condtion Create/Update
+3. Criteria Table Type = EVENT ACCOUNT CONDITIONS PARAMETER CODE [EVENT_ACO_PARAMETER_CD]
+4. Response Table Type = EVENT ACCOUNT CONDITIONS UPDATE RESPONSE PARAMETER
+5. Column Values Type = [EVENT_ACO_COLUMN_PARAMETER_CD]
+
+Action - JSON 
+--------------
+- JMS   - JMS Queue
+- Webhook - HTTP Notification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AAC1
+  - TX1 Comment
+  - Tx2
+  - Tx3
+  - Tx4 [Posted] 
+    - Comment Columns
+      - Action 
+
+
+Event - > Txn Posted
+           -> AAD ID
