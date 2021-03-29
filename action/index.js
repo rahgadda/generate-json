@@ -15,7 +15,7 @@ fs.readdirSync(sourceFolderLocation).forEach(fileName => {
 
 //Processing each file
 function processTxtFile(fileName) {
-    fs.readFile(sourceFolderLocation+fileName, 'utf8', function (err,data) {
+    fs.readFile(sourceFolderLocation+"/"+fileName, 'utf8', function (err,data) {
         if (err) {
             return console.log("Error processing " + fileName + " " + err);
         }
