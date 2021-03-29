@@ -19,12 +19,10 @@ jobs:
     steps:
       - name: Checking out code
         uses: actions/checkout@v2
-      - name: Change dir to action
-        working-directory: action
-        run: pwd
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm start
+          node-version: ${{ matrix.node-version }}  
+      - name: Change dir to action
+        working-directory: action
+        run: pwd; npm ci;  npm start
