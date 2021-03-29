@@ -1,23 +1,23 @@
 {
-  "users": [
+  "rahul": [
     {
       "id": 0,
-      "name": "Vaughn Paquette",
-      "work": "Keysoft",
-      "email": "vaughn.paquette@keysoft.org",
-      "dob": "1941",
-      "address": "93 Tower Lane",
-      "city": "Portland",
-      "optedin": true
+      "name": "Olivia Starck",
+      "work": "OpenServ",
+      "email": "olivia.starck@openserv.biz",
+      "dob": "1906",
+      "address": "3 Arlington Road",
+      "city": "Hastings",
+      "optedin": false
     },
     {
       "id": 1,
-      "name": "Liza Paschall",
-      "work": "LexiconLabs",
-      "email": "liza.paschall@lexiconlabs.eu",
-      "dob": "1959",
-      "address": "34 Berkeley Street",
-      "city": "Dundee",
+      "name": "Yuri Murphy",
+      "work": "Terralabs",
+      "email": "yuri.murphy@terralabs.xyz",
+      "dob": "1908",
+      "address": "44 Baker Street",
+      "city": "Wilmington",
       "optedin": true
     }
   ],
@@ -27,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 46.59,
-    "y": -1.39
+    "x": 29.19,
+    "y": 18.47
   },
-  "price": "$35,295"
+  "price": "$65,959"
 }
