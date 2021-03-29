@@ -2,23 +2,23 @@
   "rahul": [
     {
       "id": 0,
-      "name": "Olivia Starck",
-      "work": "OpenServ",
-      "email": "olivia.starck@openserv.biz",
-      "dob": "1906",
-      "address": "3 Arlington Road",
-      "city": "Hastings",
+      "name": "Eleanore Neal",
+      "work": "Pancast",
+      "email": "eleanore.neal@pancast.org",
+      "dob": "1929",
+      "address": "47 Tavistock Place",
+      "city": "Fairfield",
       "optedin": false
     },
     {
       "id": 1,
-      "name": "Yuri Murphy",
-      "work": "Terralabs",
-      "email": "yuri.murphy@terralabs.xyz",
-      "dob": "1908",
-      "address": "44 Baker Street",
-      "city": "Wilmington",
-      "optedin": true
+      "name": "Cedric Brandt",
+      "work": "Citisys",
+      "email": "cedric.brandt@citisys.gov",
+      "dob": "1925",
+      "address": "36 Pitman Street",
+      "city": "Medford",
+      "optedin": false
     }
   ],
   "images": [
@@ -27,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 29.19,
-    "y": 18.47
+    "x": 17.79,
+    "y": 15.18
   },
-  "price": "$65,959"
+  "price": "$41,555"
 }
