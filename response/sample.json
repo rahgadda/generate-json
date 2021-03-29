@@ -1,23 +1,23 @@
 {
-  "rahul": [
+  "users": [
     {
       "id": 0,
-      "name": "Joslyn Rebelo",
-      "work": "Protheon",
-      "email": "joslyn.rebelo@protheon.biz",
-      "dob": "1907",
-      "address": "86 Gartland Street",
-      "city": "London",
-      "optedin": false
+      "name": "Vaughn Paquette",
+      "work": "Keysoft",
+      "email": "vaughn.paquette@keysoft.org",
+      "dob": "1941",
+      "address": "93 Tower Lane",
+      "city": "Portland",
+      "optedin": true
     },
     {
       "id": 1,
-      "name": "Richelle Oldman",
-      "work": "OpenServ",
-      "email": "richelle.oldman@openserv.net",
-      "dob": "1954",
-      "address": "26 Sterling Street",
-      "city": "Rockhampton",
+      "name": "Liza Paschall",
+      "work": "LexiconLabs",
+      "email": "liza.paschall@lexiconlabs.eu",
+      "dob": "1959",
+      "address": "34 Berkeley Street",
+      "city": "Dundee",
       "optedin": true
     }
   ],
@@ -27,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 8.25,
-    "y": -10.80
+    "x": 46.59,
+    "y": -1.39
   },
-  "price": "$31,649"
+  "price": "$35,295"
 }
