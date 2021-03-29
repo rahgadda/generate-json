@@ -1,26 +1,185 @@
-{
-  "rahul": [
-    {{#repeat 2}}
-    {
-      "id": {{@index}},
-      "name": "{{firstName}} {{lastName}}",
-      "work": "{{company}}",
-      "email": "{{email}}",
-      "dob": "{{date '1900' '2000' 'YYYY'}}",
-      "address": "{{int 1 100}} {{street}}",
-      "city": "{{city}}",
-      "optedin": {{boolean}}
-    }
-    {{/repeat}}
-  ],
-  "images": [
-    {{#repeat 3}}
-    "img{{@index}}.png"
-    {{/repeat}}
-  ],
-  "coordinates": {
-    "x": {{float -50 50 '0.00'}},
-    "y": {{float -25 25 '0.00'}}
-  },
-  "price": "${{int 0 99999 '0,0'}}"
-}
+Pending:
+--------
+17. Segmentation Logic/UI update in Confluence
+    - Tasks               [Done]
+    - Strategy            [Done]
+    - User Group          [Done]
+    - User Assignment     [Partial]
+    - Segment             [Partial]
+    - Events              []
+    - Event Actions       []
+    - Case-Payment        []
+21. Wyndham Enhancements 
+    - Create Account with Producer of same Company different branch.
+      - AP Generation
+      - GL Accounting
+      - Producer Statement
+      - Compensation
+      - Subvention
+      - Commission 
+    - Payment WS to accept Reason Code as part of REVERSE                                       [Done]
+    - Customer Nbr in ADD NEW CUSTOMER[CUS_ADD_MAINT] Transaction                               [Done]
+    - Optional Customer Code in Customer Based Payment                                          [NA]
+    - BRD Exclude Associate Accounts from Customer Statements                                   [NA]
+27. 14.10 BRD
+    - Tagging                                                                                   [Done]
+    - Multiple Entity Level Conditions                                                          [NA]
+    - Billing Cycle And Statement Cycle                                                         [NA]
+    - Event Actions Enhancement                                                                 [Done]
+      - Adding formula parameters as Event Action Values
+    - Principle only Spread errors out if the Payment amount is more than Principle Balance     []
+    - Automated Reschedule                                                                      []
+    - Provide separate email by Module/Report                                                   []
+    - Billing cycle, Company code – needed in GetAccountDetails                                 [Started]
+    - OFSLL should send Webhook notification on pool code change                                [Started]
+    - Currency, Product Code is needed in  Master Customer Statements,                          [Started]
+      Customer Statements, Master Customer Mock Statements.                                     
+31. Openshift                                                                                   [Started]
+32. Kafka                                                                                       []
+33. Camel                                                                                       []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Personal
+ - CSS 1hr video     [2hr]
+ - Java Collections  [2hr]
+ - Keycloak          [2hr]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Done:
+-----
+1.  Excess Fair Value [Done]
+8.  Screenshots for Segmentation [Done]
+9.  Webhook handshake to Paymentus [Done]
+10. Producer Company Branch Testing [Done]
+11. Residual % Testing [Done]
+12. Email Batch Job [Done]
+13. Webhook in Infinovative [Done]
+18. Call with Ravi [Done]
+20. ORDS [Done]
+21. ORDS CORS Issue [Done]
+14. Paymentus Mapping Document [Done]
+5.  UDP/Events Seed Data in Infinovative env [Done]
+6.  Conductor Demo [Done]
+2.  Release Note, PPT [Done]
+25. Reply Paymentus Emails [Done]
+24. https://camunda.com/ [NA]
+3.  Automation Cases  [Done]
+     - Subvention
+     - Lease Extension
+     - Business only Account Settlement
+19. UI Path [NA]
+20. Automation Comments [NA]
+22. Running Producer Batch Job [NA]
+23. Drools [Done]
+26. User Manual [Done]
+4.  Testing of Evergreen Lease
+7.  Spring Boot Demo
+15. PFD
+16. WebServices Testing
+    1.  Setup             [1-Done]
+    2.  Customer Services [2-Done]
+    3.  Collection        [10-]
+    4.  Customer          [5-Done]
+    5.  Business          [6-Done]
+    6.  Collateral        [7-Done]
+    7.  Common            [8-Done]
+    8.  Origination       [9-]
+    9.  Producer          [3-Done]
+    10. Vendor            [4-Done] 
+    11. Authentication
+28. Sprint Closer and Effort logging                                                            [Done]
+29. Paymentus
+    - Excel to determine scope
+    - Testing                      [Done]
+30. Optaplanner for REVAL          [Done]
+
+
+
+
+
+
+
+
+Sprint Team
+-----------------------------------
+Rahul Gaddam	                PMG
+Sharmile.a@oracle.com	        PLSQL
+vivek.sasikumar@oracle.com	    ADF/PLSQL
+juluri.karteek@oracle.com	    ADF/PLSQL
+Jeyakumar	                    ADF/PLSQL
+priyanka.dolle@oracle.com	    WS
+manjunath.r.reddy@oracle.com	PLSQL
+kishore.krishnan@oracle.com	    QA
+
+
+
+
+
+
+Has understanding ASC 842
+IFRS
+Capital Lease 
+Operating Lease
+
+
+Cost = 1,00,000
+Depreciation = 54,000
+Residual = 46,000
+Rate = 5%
+Term = 36
+
+
+1. Do not repeat task
+
+
+Salvage = 10,000
+
+
+
+
+
+cd /scratch/app/FMW_HOME/user_projects/domains/OFSLL_domain/bin/
+./stopWebLogic.sh 
+./stopNodeManager.sh 
+
+./startWebLogic.sh &
+./startNodeManager.sh &
+
+export ORACLE_HOME=/scratch/app/oracle/product/18.0.0/dbhome_1
+export PATH=$ORACLE_HOME/bin:$PATH
+export ORACLE_SID=OFSLLPDB
+source /home/oracle/set_env.sh
+
+
+
+
+Asset Type
+ - Usage Rental Details
+ - USage Charge
+ - Rental Charge
+Cycle Setup
+Product Type
