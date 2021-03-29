@@ -10,7 +10,7 @@
         const data = await fetch("https://api.github.com/repos/rahgadda/generate-json/contents/data/sample.hbs", {
             "method": "GET",
             "headers": {
-                "Authorization": "token 523acd4759866adbd5f2874da2d8b85d372f1d76",
+                "Authorization": "token 513e46ccc12271cfa61801bbba14012b229d038e",
                 "Accept": "application/vnd.github.v3+json"
             }
             })
@@ -40,7 +40,7 @@
         const finalData = await fetch("https://api.github.com/repos/rahgadda/generate-json/contents/data/sample.hbs", {
             "method": "PUT",
             "headers": {
-                "Authorization": "token 523acd4759866adbd5f2874da2d8b85d372f1d76",
+                "Authorization": "token 513e46ccc12271cfa61801bbba14012b229d038e",
                 "Accept": "application/vnd.github.v3+json",
                 "Content-Type": 'application/json'
             },
