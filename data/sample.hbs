@@ -1,8 +1,8 @@
 {
   "rahul": [
-    {{#each [2...12]}}
+    {{#each [2,3,4,5]}}
     {
-      "id": {{@index}},
+      "id": {{this}},
       "name": "{{firstName}} {{lastName}}",
       "work": "{{company}}",
       "email": "{{email}}",
