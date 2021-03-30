@@ -10,7 +10,7 @@
         const data = await fetch("https://api.github.com/repos/rahgadda/generate-json/contents/data/sample.hbs", {
             "method": "GET",
             "headers": {
-                "Authorization": "token 513e46ccc12271cfa61801bbba14012b229d038e",
+                "Authorization": "token <public token>",
                 "Accept": "application/vnd.github.v3+json"
             }
             })
@@ -40,7 +40,7 @@
         const finalData = await fetch("https://api.github.com/repos/rahgadda/generate-json/contents/data/sample.hbs", {
             "method": "PUT",
             "headers": {
-                "Authorization": "token 513e46ccc12271cfa61801bbba14012b229d038e",
+                "Authorization": "token <public token>",
                 "Accept": "application/vnd.github.v3+json",
                 "Content-Type": 'application/json'
             },
@@ -105,7 +105,7 @@
   </Cell>
   <Cell xs={4}>
     <Block>
-        <a href="https://github.com/rahgadda/generate-json/blob/main/response/sample.json">Downlod Generated Json</a>
+        <a href="https://raw.githubusercontent.com/rahgadda/generate-json/main/response/sample.json">Downlod Generated Json</a>
     </Block>
   </Cell>
   <Cell xs={3}>
