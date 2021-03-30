@@ -1,8 +1,8 @@
 {
   "rahul": [
-    {{#each [2,3,4,5]}}
+    {{#repeat 5}}
     {
-      "id": {{this}},
+      "id": {{add @index 10}},
       "name": "{{firstName}} {{lastName}}",
       "work": "{{company}}",
       "email": "{{email}}",
@@ -11,7 +11,7 @@
       "city": "{{city}}",
       "optedin": {{boolean}}
     }
-    {{/each}}
+    {{/repeat}}
   ],
   "images": [
     {{#repeat 3}}
