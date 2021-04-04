@@ -7,3 +7,8 @@
 ## Design
 - Use GithubPages to host this page
 - Use Github Actions to generate json based on input provided 
+
+## TODO
+- Design and Develop an Intuitive User Interface to create the template files
+- Allow oAuth 2.0 User Authentication and Authorisation.  
+
