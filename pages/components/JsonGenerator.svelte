@@ -1,12 +1,12 @@
 <script>
     import { onMount } from "svelte";
+    import { Octokit } from "@octokit/rest";
+    import { createOAuthAppAuth  } from "@octokit/auth-oauth-app";
+
     export let urlCode;
 
     const gitURL =
         "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
-    const gitApiURL =
-        "https://github.com/login/oauth/access_token?client_id=32748c79e2f3936ca0cb&client_secret=c871dbe5c837905a541c03d33fb44858c5973a8b&code=";
-
     let inputTemplate = "";
     let jsonOutput = "";
 
@@ -18,19 +18,17 @@
     });
 
     async function generateToken() {
-        console.log(" Token "+urlCode);
-
-        const data = await fetch(gitApiURL + urlCode, {
-                                method: "POST",
-                                mode: 'no-cors',
-                                headers: {
-                                    Accept: "application/json"
-                                },
-                           })
-                           .then((response) => response.json())
-                           .then((data) => data.access_token);
-
-        console.log(" Token "+data);
+        const auth = createOAuthAppAuth({
+                        clientType: "oauth-app",
+                        clientId: "32748c79e2f3936ca0cb",
+                        clientSecret: "c871dbe5c837905a541c03d33fb44858c5973a8b",
+                     });
+        const userAuthenticationFromWebFlow = await auth({
+                                                        type: "oauth-user",
+                                                        code: urlCode
+                                                    });
+        console.log("Token is"+ userAuthenticationFromWebFlow.token);
+        
     }
 </script>
 

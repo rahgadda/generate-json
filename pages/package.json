@@ -11,6 +11,8 @@
     "sirv-cli": "^0.3.1"
   },
   "dependencies": {
+    "@octokit/auth-oauth-app": "^4.1.2",
+    "@octokit/rest": "^18.5.2",
     "svelte": "^3.32.3"
   },
   "scripts": {
