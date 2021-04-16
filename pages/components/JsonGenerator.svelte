@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import  GitGenerateToken  from "../lib/GitGenerateToken.js"
 
     export let urlCode;
     const gitURL =
@@ -15,7 +16,8 @@
     });
 
     function saveFile() {
-        console.log("Save File "+urlCode)
+
+        console.log("Save File "+GitGenerateToken.getToken(urlCode));
     }
 
     function refreshJson() {
