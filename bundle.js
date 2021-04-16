@@ -434,7 +434,8 @@ var app = (function () {
     class GitGenerateToken{
         constructor(code ){
             console.log(gitAPIURL);
-            this.token = http.postNoData(gitAPIURL+code);
+            http.postNoData(gitAPIURL+code)
+                    .then(data => this.token = data );
         }
 
         getToken(){
