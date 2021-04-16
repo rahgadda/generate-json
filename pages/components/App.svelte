@@ -15,7 +15,7 @@
     
 </script>
 
-{#if urlToken}
+{#if {urlToken}}
     <Login />
 {:else}
     <JsonGenerator />
