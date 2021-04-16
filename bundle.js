@@ -406,7 +406,7 @@ var app = (function () {
     			button0.textContent = " Save ";
     			t3 = space();
     			button1 = element("button");
-    			button1.textContent = "Generate";
+    			button1.textContent = "Reload";
     			t5 = space();
     			div3 = element("div");
     			div1 = element("div");
@@ -424,15 +424,15 @@ var app = (function () {
     			attr_dev(div0, "class", "button svelte-11ebzd6");
     			add_location(div0, file, 19, 4, 587);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 25, 12, 770);
+    			add_location(textarea, file, 25, 12, 768);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 24, 8, 733);
+    			add_location(div1, file, 24, 8, 731);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 28, 12, 886);
+    			add_location(pre, file, 28, 12, 884);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 27, 8, 848);
+    			add_location(div2, file, 27, 8, 846);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 23, 4, 699);
+    			add_location(div3, file, 23, 4, 697);
     			attr_dev(main, "class", "container svelte-11ebzd6");
     			add_location(main, file, 15, 0, 463);
     		},

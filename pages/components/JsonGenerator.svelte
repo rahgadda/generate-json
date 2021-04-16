@@ -19,7 +19,7 @@
     </header>
     <div class="button">
         <button>&nbsp;Save&nbsp;</button>
-        <button>Generate</button>
+        <button>Reload</button>
     </div>
     <div class="html-editor">
         <div class="left-panel">
