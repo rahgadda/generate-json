@@ -3,12 +3,11 @@
     import Login from "./Login.svelte";
 
     const parmas = new URLSearchParams(window.location.search);
-    const urlToken = parmas.get("code");
-    console.log(urlToken);
+    const urlCode = parmas.get("code");
 </script>
 
-{#if urlToken}
-    <JsonGenerator />
+{#if urlCode}
+    <JsonGenerator {urlCode} />
 {:else}
     <Login />
 {/if}

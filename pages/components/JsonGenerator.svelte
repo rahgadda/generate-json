@@ -1,16 +1,36 @@
 <script>
     import { onMount } from "svelte";
-    const apiURL =
+    export let urlCode;
+
+    const gitURL =
         "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
+    const gitApiURL =
+        "https://github.com/login/oauth/access_token?client_id=32748c79e2f3936ca0cb&client_secret=c871dbe5c837905a541c03d33fb44858c5973a8b&code=";
+
     let inputTemplate = "";
     let jsonOutput = "";
 
     onMount(async function () {
-        let response = await fetch(apiURL + "data/sample.hbs");
+        let response = await fetch(gitURL + "data/sample.hbs");
         inputTemplate = await response.text();
-        response = await fetch(apiURL + "response/sample.json");
+        response = await fetch(gitURL + "response/sample.json");
         jsonOutput = await response.text();
     });
+
+    async function generateToken() {
+        const data = await fetch(gitApiURL + urlCode, {
+                                method: "GET",
+                                headers: {
+                                    Accept: "application/vnd.github.v3+json",
+                                },
+                           })
+                           .then((response) => response.json())
+                           .then((data) => data.access_token)
+                           .catch((err) => {
+                               console.error(err);
+                           });
+        console.log(" Token "+data);
+    }
 </script>
 
 <main class="container">
