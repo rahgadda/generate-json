@@ -27,7 +27,7 @@
     }
 </script>
 
-<h1>Token is {accessToken}</h1>
+<!-- <h1>Token is {accessToken}</h1> -->
 <main class="container">
     <header class="header">
         <h1 class="header-title">JSON Generator</h1>
