@@ -22,8 +22,7 @@ export default class Fetch{
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
-                "Accept":"application/json",
-                "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
+                "Accept":"application/json"
             },
             body: JSON.stringify(data)
         });
@@ -45,7 +44,6 @@ export default class Fetch{
             headers: {
                 'Content-type': 'application/json',
                 "Accept":"application/json",
-                "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
             }
         });
   
