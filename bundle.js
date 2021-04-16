@@ -416,25 +416,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 17, 8, 524);
+    			add_location(h1, file, 17, 8, 526);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 16, 4, 492);
-    			add_location(button0, file, 20, 8, 616);
-    			add_location(button1, file, 21, 8, 658);
+    			add_location(header, file, 16, 4, 494);
+    			add_location(button0, file, 20, 8, 618);
+    			add_location(button1, file, 21, 8, 660);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 19, 4, 587);
+    			add_location(div0, file, 19, 4, 589);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 25, 12, 768);
+    			add_location(textarea, file, 25, 12, 770);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 24, 8, 731);
+    			add_location(div1, file, 24, 8, 733);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 28, 12, 884);
+    			add_location(pre, file, 28, 12, 886);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 27, 8, 846);
+    			add_location(div2, file, 27, 8, 848);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 23, 4, 697);
+    			add_location(div3, file, 23, 4, 699);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 15, 0, 463);
+    			add_location(main, file, 15, 0, 465);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -493,10 +493,10 @@ var app = (function () {
     const apiURL = "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
 
     function instance($$self, $$props, $$invalidate) {
-    	let inputTemplate;
-    	let jsonOutput;
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("JsonGenerator", slots, []);
+    	let inputTemplate = "";
+    	let jsonOutput = "";
 
     	onMount(async function () {
     		let response = await fetch(apiURL + "data/sample.hbs");
@@ -532,8 +532,6 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	 $$invalidate(0, inputTemplate = "");
-    	 $$invalidate(1, jsonOutput = "");
     	return [inputTemplate, jsonOutput, textarea_input_handler];
     }
 

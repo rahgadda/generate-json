@@ -2,8 +2,8 @@
     import { onMount } from "svelte";
     const apiURL =
         "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
-    $: inputTemplate = "";
-    $: jsonOutput = "";
+    let inputTemplate = "";
+    let jsonOutput = "";
 
     onMount(async function () {
         let response = await fetch(apiURL + "data/sample.hbs");
