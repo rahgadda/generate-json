@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { createOAuthAppAuth  } from "@octokit/auth-oauth-app";
+    // import { createOAuthAppAuth  } from "@octokit/auth-oauth-app";
 
     export let urlCode;
 
@@ -17,16 +17,16 @@
     });
 
     async function generateToken() {
-        const auth = createOAuthAppAuth({
-                        clientType: "oauth-app",
-                        clientId: "32748c79e2f3936ca0cb",
-                        clientSecret: "c871dbe5c837905a541c03d33fb44858c5973a8b",
-                     });
-        const userAuthenticationFromWebFlow = await auth({
-                                                        type: "oauth-user",
-                                                        code: urlCode
-                                                    });
-        console.log("Token is"+ userAuthenticationFromWebFlow.token);
+        // const auth = createOAuthAppAuth({
+        //                 clientType: "oauth-app",
+        //                 clientId: "32748c79e2f3936ca0cb",
+        //                 clientSecret: "c871dbe5c837905a541c03d33fb44858c5973a8b",
+        //              });
+        // const userAuthenticationFromWebFlow = await auth({
+        //                                                 type: "oauth-user",
+        //                                                 code: urlCode
+        //                                             });
+        // console.log("Token is"+ userAuthenticationFromWebFlow.token);
         
     }
 </script>

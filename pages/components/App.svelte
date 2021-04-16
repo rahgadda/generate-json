@@ -6,5 +6,8 @@
     const urlCode = parmas.get("code");
 </script>
 
-
+{#if urlCode}
     <JsonGenerator {urlCode} />
+{:else}
+    <Login />
+{/if}
