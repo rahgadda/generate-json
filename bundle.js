@@ -379,16 +379,17 @@ var app = (function () {
     	let header;
     	let h1;
     	let t1;
-    	let button;
-    	let br;
+    	let button0;
     	let t3;
+    	let button1;
+    	let t5;
     	let div2;
     	let div0;
     	let textarea;
-    	let t4;
+    	let t6;
     	let div1;
     	let pre;
-    	let t5;
+    	let t7;
     	let mounted;
     	let dispose;
 
@@ -399,34 +400,37 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "JSON Generator";
     			t1 = space();
-    			button = element("button");
-    			button.textContent = "Genearte Json";
-    			br = element("br");
+    			button0 = element("button");
+    			button0.textContent = "Save";
     			t3 = space();
+    			button1 = element("button");
+    			button1.textContent = "Generate";
+    			t5 = space();
     			div2 = element("div");
     			div0 = element("div");
     			textarea = element("textarea");
-    			t4 = space();
+    			t6 = space();
     			div1 = element("div");
     			pre = element("pre");
-    			t5 = text(/*jsonOutput*/ ctx[1]);
+    			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
     			add_location(h1, file, 17, 8, 524);
     			attr_dev(header, "class", "header svelte-11ebzd6");
     			add_location(header, file, 16, 4, 492);
-    			attr_dev(button, "class", "button svelte-11ebzd6");
-    			add_location(button, file, 19, 4, 587);
-    			add_location(br, file, 19, 49, 632);
+    			attr_dev(button0, "class", "button svelte-11ebzd6");
+    			add_location(button0, file, 19, 4, 587);
+    			attr_dev(button1, "class", "button svelte-11ebzd6");
+    			add_location(button1, file, 20, 4, 628);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 22, 12, 714);
+    			add_location(textarea, file, 23, 12, 744);
     			attr_dev(div0, "class", "left-panel svelte-11ebzd6");
-    			add_location(div0, file, 21, 8, 677);
+    			add_location(div0, file, 22, 8, 707);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 25, 12, 830);
+    			add_location(pre, file, 26, 12, 860);
     			attr_dev(div1, "class", "right-panel svelte-11ebzd6");
-    			add_location(div1, file, 24, 8, 792);
+    			add_location(div1, file, 25, 8, 822);
     			attr_dev(div2, "class", "html-editor svelte-11ebzd6");
-    			add_location(div2, file, 20, 4, 643);
+    			add_location(div2, file, 21, 4, 673);
     			attr_dev(main, "class", "container svelte-11ebzd6");
     			add_location(main, file, 15, 0, 463);
     		},
@@ -438,17 +442,18 @@ var app = (function () {
     			append_dev(main, header);
     			append_dev(header, h1);
     			append_dev(main, t1);
-    			append_dev(main, button);
-    			append_dev(main, br);
+    			append_dev(main, button0);
     			append_dev(main, t3);
+    			append_dev(main, button1);
+    			append_dev(main, t5);
     			append_dev(main, div2);
     			append_dev(div2, div0);
     			append_dev(div0, textarea);
     			set_input_value(textarea, /*inputTemplate*/ ctx[0]);
-    			append_dev(div2, t4);
+    			append_dev(div2, t6);
     			append_dev(div2, div1);
     			append_dev(div1, pre);
-    			append_dev(pre, t5);
+    			append_dev(pre, t7);
 
     			if (!mounted) {
     				dispose = listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[2]);
@@ -460,7 +465,7 @@ var app = (function () {
     				set_input_value(textarea, /*inputTemplate*/ ctx[0]);
     			}
 
-    			if (dirty & /*jsonOutput*/ 2) set_data_dev(t5, /*jsonOutput*/ ctx[1]);
+    			if (dirty & /*jsonOutput*/ 2) set_data_dev(t7, /*jsonOutput*/ ctx[1]);
     		},
     		i: noop,
     		o: noop,
