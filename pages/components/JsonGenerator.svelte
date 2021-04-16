@@ -56,7 +56,6 @@
         inputTemplate = await response.text();
         response = await fetch(apiURL+"response/sample.json");
         jsonOutput = await response.text();
-        jsonOutput= JSON.stringify(jsonOutput, null, "\t")
     });
 </script>
 
@@ -69,7 +68,7 @@
 					<textarea bind:value={inputTemplate} class="source"></textarea>
 			</div>
 			<div class="right-panel">
-					<div class="output">{jsonOutput}</div>
+					<pre class="output">{jsonOutput}</pre>
 			</div>
 	</div>
 </main>
