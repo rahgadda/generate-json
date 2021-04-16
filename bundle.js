@@ -482,25 +482,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 29, 8, 800);
+    			add_location(h1, file, 28, 8, 799);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 28, 4, 768);
-    			add_location(button0, file, 32, 8, 892);
-    			add_location(button1, file, 33, 8, 954);
+    			add_location(header, file, 27, 4, 767);
+    			add_location(button0, file, 31, 8, 891);
+    			add_location(button1, file, 32, 8, 953);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 31, 4, 863);
+    			add_location(div0, file, 30, 4, 862);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 37, 12, 1087);
+    			add_location(textarea, file, 36, 12, 1086);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 36, 8, 1050);
+    			add_location(div1, file, 35, 8, 1049);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 40, 12, 1203);
+    			add_location(pre, file, 39, 12, 1202);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 39, 8, 1165);
+    			add_location(div2, file, 38, 8, 1164);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 35, 4, 1016);
+    			add_location(div3, file, 34, 4, 1015);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 27, 0, 739);
+    			add_location(main, file, 26, 0, 738);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
