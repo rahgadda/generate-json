@@ -17,8 +17,10 @@
     <header class="header">
         <h1 class="header-title">JSON Generator</h1>
     </header>
-    <button class="button">Save</button>
-    <button class="button">Generate</button>
+    <div class="button">
+        <button>&nbsp;Save&nbsp;</button>
+        <button>Generate</button>
+    </div>
     <div class="html-editor">
         <div class="left-panel">
             <textarea bind:value={inputTemplate} class="source" />
