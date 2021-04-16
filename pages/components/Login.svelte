@@ -3,11 +3,11 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 <a
-    href="https://github.com/login/oauth/authorize?client_id=32748c79e2f3936ca0cb&scope=user:email&redirect_uri=https://localhost/path"
+    href="https://github.com/login/oauth/authorize?client_id=32748c79e2f3936ca0cb&scope=user:email"
     aria-label="Login with Github"
     class="centered fa fa-github"
 >
-&nbsp; Github</a
+&nbsp; Login</a
 >
 
 <style>
@@ -21,7 +21,7 @@
     }
     .centered {
         position: fixed; /* or absolute */
-        top: 50%;
+        top: 45%;
         left: 45%;
     }
     .fa:hover {
