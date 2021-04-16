@@ -2,22 +2,32 @@
   "users": [
     {
       "id": 0,
-      "name": "Rosanne Carroll",
-      "work": "Kancom",
-      "email": "rosanne.carroll@kancom.biz",
-      "dob": "1923",
-      "address": "98 Pembrooke Street",
-      "city": "Plymouth",
-      "optedin": false
+      "name": "Raylene Smit",
+      "work": "Hivemind",
+      "email": "raylene.smit@hivemind.xyz",
+      "dob": "1957",
+      "address": "49 Brentwood Drive",
+      "city": "Albany",
+      "optedin": true
     },
     {
       "id": 1,
-      "name": "Andy Latshaw",
-      "work": "Templatek",
-      "email": "andy.latshaw@templatek.edu",
-      "dob": "1973",
-      "address": "49 Fuller Road",
-      "city": "Canterbury",
+      "name": "Madelyn Dampier",
+      "work": "Britech",
+      "email": "madelyn.dampier@britech.club",
+      "dob": "1986",
+      "address": "20 Shaftsbury Avenue",
+      "city": "Frankston",
+      "optedin": true
+    },
+    {
+      "id": 2,
+      "name": "Roman Keesee",
+      "work": "TrioSys",
+      "email": "roman.keesee@triosys.mobi",
+      "dob": "1918",
+      "address": "88 Berkeley Street",
+      "city": "Walkerville",
       "optedin": false
     }
   ],
@@ -27,8 +37,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": -47.62,
-    "y": 3.62
+    "x": 5.19,
+    "y": 15.74
   },
-  "price": "$4,196"
+  "price": "$31,959"
 }
