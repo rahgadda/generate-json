@@ -418,25 +418,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 41, 8, 1443);
+    			add_location(h1, file, 42, 8, 1492);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 40, 4, 1411);
-    			add_location(button0, file, 44, 8, 1535);
-    			add_location(button1, file, 45, 8, 1602);
+    			add_location(header, file, 41, 4, 1460);
+    			add_location(button0, file, 45, 8, 1584);
+    			add_location(button1, file, 46, 8, 1651);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 43, 4, 1506);
+    			add_location(div0, file, 44, 4, 1555);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 49, 12, 1712);
+    			add_location(textarea, file, 50, 12, 1761);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 48, 8, 1675);
+    			add_location(div1, file, 49, 8, 1724);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 52, 12, 1828);
+    			add_location(pre, file, 53, 12, 1877);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 51, 8, 1790);
+    			add_location(div2, file, 52, 8, 1839);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 47, 4, 1641);
+    			add_location(div3, file, 48, 4, 1690);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 39, 0, 1382);
+    			add_location(main, file, 40, 0, 1431);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -518,6 +518,7 @@ var app = (function () {
 
     		const data = await fetch(gitApiURL + urlCode, {
     			method: "POST",
+    			mode: "no-cors",
     			headers: {
     				Accept: "application/json",
     				"Access-Control-Allow-Origin": "*"
