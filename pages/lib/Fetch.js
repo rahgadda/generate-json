@@ -21,7 +21,9 @@ export default class Fetch{
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
+                "Accept":"application/json",
+                "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
             },
             body: JSON.stringify(data)
         });
@@ -41,7 +43,9 @@ export default class Fetch{
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
+                "Accept":"application/json",
+                "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
             }
         });
   

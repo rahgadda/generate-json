@@ -394,7 +394,9 @@ var app = (function () {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-type': 'application/json'
+                    'Content-type': 'application/json',
+                    "Accept":"application/json",
+                    "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
                 },
                 body: JSON.stringify(data)
             });
@@ -414,7 +416,9 @@ var app = (function () {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-type': 'application/json'
+                    'Content-type': 'application/json',
+                    "Accept":"application/json",
+                    "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
                 }
             });
       
@@ -430,8 +434,13 @@ var app = (function () {
     const gitAPIURL = "https://github.com/login/oauth/access_token?client_id=32748c79e2f3936ca0cb&client_secret=c871dbe5c837905a541c03d33fb44858c5973a8b&code=";
 
     class GitGenerateToken{
-        getToken(code ){
-            return http.postNoData(gitAPIURL+code);
+        constructor(code ){
+            console.log(gitAPIURL);
+            this.token = http.postNoData(gitAPIURL+code);
+        }
+
+        getToken(){
+            return this.token;
         }
     }
 
@@ -482,25 +491,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 28, 8, 799);
+    			add_location(h1, file, 28, 8, 805);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 27, 4, 767);
-    			add_location(button0, file, 31, 8, 891);
-    			add_location(button1, file, 32, 8, 953);
+    			add_location(header, file, 27, 4, 773);
+    			add_location(button0, file, 31, 8, 897);
+    			add_location(button1, file, 32, 8, 959);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 30, 4, 862);
+    			add_location(div0, file, 30, 4, 868);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 36, 12, 1086);
+    			add_location(textarea, file, 36, 12, 1092);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 35, 8, 1049);
+    			add_location(div1, file, 35, 8, 1055);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 39, 12, 1202);
+    			add_location(pre, file, 39, 12, 1208);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 38, 8, 1164);
+    			add_location(div2, file, 38, 8, 1170);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 34, 4, 1015);
+    			add_location(div3, file, 34, 4, 1021);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 26, 0, 738);
+    			add_location(main, file, 26, 0, 744);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -578,7 +587,7 @@ var app = (function () {
     	});
 
     	function saveFile() {
-    		console.log("Save File " + GitGenerateToken.getToken(urlCode));
+    		console.log("Save File " + new GitGenerateToken(urlCode).getToken());
     	}
 
     	function refreshJson() {

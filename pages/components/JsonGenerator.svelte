@@ -16,7 +16,7 @@
     });
 
     function saveFile() {
-        console.log("Save File "+GitGenerateToken.getToken(urlCode));
+        console.log("Save File "+new GitGenerateToken(urlCode).getToken());
     }
 
     function refreshJson() {
