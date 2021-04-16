@@ -435,8 +435,8 @@ var app = (function () {
     const gitAPIURL = "https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token?client_id=32748c79e2f3936ca0cb&client_secret=c871dbe5c837905a541c03d33fb44858c5973a8b&code=";
 
     class GitGenerateToken{
-        constructor(code ){
-            http.postNoData(gitAPIURL+code);
+        getToken(code){
+            return (async () => await http.postNoData(gitAPIURL+code) )();
         }
     }
 
@@ -446,109 +446,126 @@ var app = (function () {
     const file = "components/JsonGenerator.svelte";
 
     function create_fragment(ctx) {
+    	let h10;
+    	let t0;
+    	let t1;
+    	let t2;
     	let main;
     	let header;
-    	let h1;
-    	let t1;
+    	let h11;
+    	let t4;
     	let div0;
     	let button0;
-    	let t3;
+    	let t6;
     	let button1;
-    	let t5;
+    	let t8;
     	let div3;
     	let div1;
     	let textarea;
-    	let t6;
+    	let t9;
     	let div2;
     	let pre;
-    	let t7;
+    	let t10;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
+    			h10 = element("h1");
+    			t0 = text("Token is ");
+    			t1 = text(/*accessToken*/ ctx[2]);
+    			t2 = space();
     			main = element("main");
     			header = element("header");
-    			h1 = element("h1");
-    			h1.textContent = "JSON Generator";
-    			t1 = space();
+    			h11 = element("h1");
+    			h11.textContent = "JSON Generator";
+    			t4 = space();
     			div0 = element("div");
     			button0 = element("button");
     			button0.textContent = " Save ";
-    			t3 = space();
+    			t6 = space();
     			button1 = element("button");
     			button1.textContent = "Reload";
-    			t5 = space();
+    			t8 = space();
     			div3 = element("div");
     			div1 = element("div");
     			textarea = element("textarea");
-    			t6 = space();
+    			t9 = space();
     			div2 = element("div");
     			pre = element("pre");
-    			t7 = text(/*jsonOutput*/ ctx[1]);
-    			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 31, 8, 887);
+    			t10 = text(/*jsonOutput*/ ctx[1]);
+    			add_location(h10, file, 29, 0, 855);
+    			attr_dev(h11, "class", "header-title svelte-11ebzd6");
+    			add_location(h11, file, 32, 8, 948);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 30, 4, 855);
-    			add_location(button0, file, 34, 8, 979);
-    			add_location(button1, file, 35, 8, 1041);
+    			add_location(header, file, 31, 4, 916);
+    			add_location(button0, file, 35, 8, 1040);
+    			add_location(button1, file, 36, 8, 1102);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 33, 4, 950);
+    			add_location(div0, file, 34, 4, 1011);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 39, 12, 1174);
+    			add_location(textarea, file, 40, 12, 1235);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 38, 8, 1137);
+    			add_location(div1, file, 39, 8, 1198);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 42, 12, 1290);
+    			add_location(pre, file, 43, 12, 1351);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 41, 8, 1252);
+    			add_location(div2, file, 42, 8, 1313);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 37, 4, 1103);
+    			add_location(div3, file, 38, 4, 1164);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 29, 0, 826);
+    			add_location(main, file, 30, 0, 887);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, h10, anchor);
+    			append_dev(h10, t0);
+    			append_dev(h10, t1);
+    			insert_dev(target, t2, anchor);
     			insert_dev(target, main, anchor);
     			append_dev(main, header);
-    			append_dev(header, h1);
-    			append_dev(main, t1);
+    			append_dev(header, h11);
+    			append_dev(main, t4);
     			append_dev(main, div0);
     			append_dev(div0, button0);
-    			append_dev(div0, t3);
+    			append_dev(div0, t6);
     			append_dev(div0, button1);
-    			append_dev(main, t5);
+    			append_dev(main, t8);
     			append_dev(main, div3);
     			append_dev(div3, div1);
     			append_dev(div1, textarea);
     			set_input_value(textarea, /*inputTemplate*/ ctx[0]);
-    			append_dev(div3, t6);
+    			append_dev(div3, t9);
     			append_dev(div3, div2);
     			append_dev(div2, pre);
-    			append_dev(pre, t7);
+    			append_dev(pre, t10);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*saveFile*/ ctx[2], false, false, false),
-    					listen_dev(button1, "click", /*refreshJson*/ ctx[3], false, false, false),
-    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[5])
+    					listen_dev(button0, "click", /*saveFile*/ ctx[3], false, false, false),
+    					listen_dev(button1, "click", /*refreshJson*/ ctx[4], false, false, false),
+    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[6])
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
+    			if (dirty & /*accessToken*/ 4) set_data_dev(t1, /*accessToken*/ ctx[2]);
+
     			if (dirty & /*inputTemplate*/ 1) {
     				set_input_value(textarea, /*inputTemplate*/ ctx[0]);
     			}
 
-    			if (dirty & /*jsonOutput*/ 2) set_data_dev(t7, /*jsonOutput*/ ctx[1]);
+    			if (dirty & /*jsonOutput*/ 2) set_data_dev(t10, /*jsonOutput*/ ctx[1]);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h10);
+    			if (detaching) detach_dev(t2);
     			if (detaching) detach_dev(main);
     			mounted = false;
     			run_all(dispose);
@@ -574,6 +591,7 @@ var app = (function () {
     	let { urlCode } = $$props;
     	let inputTemplate = "";
     	let jsonOutput = "";
+    	let accessToken = ";";
 
     	onMount(async function () {
     		let response = await fetch(gitURL + "data/sample.hbs");
@@ -582,12 +600,10 @@ var app = (function () {
     		$$invalidate(1, jsonOutput = await response.text());
     	});
 
-    	function saveFile() {
+    	async function saveFile() {
     		console.log("Saving File ");
-
-    		new GitGenerateToken(urlCode).then(data => {
-    			console.log("Token is " + data.access_token);
-    		});
+    		let response = await new GitGenerateToken().getToken(urlCode);
+    		$$invalidate(2, accessToken = await response.access_token);
     	}
 
     	function refreshJson() {
@@ -606,7 +622,7 @@ var app = (function () {
     	}
 
     	$$self.$$set = $$props => {
-    		if ("urlCode" in $$props) $$invalidate(4, urlCode = $$props.urlCode);
+    		if ("urlCode" in $$props) $$invalidate(5, urlCode = $$props.urlCode);
     	};
 
     	$$self.$capture_state = () => ({
@@ -616,14 +632,16 @@ var app = (function () {
     		gitURL,
     		inputTemplate,
     		jsonOutput,
+    		accessToken,
     		saveFile,
     		refreshJson
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("urlCode" in $$props) $$invalidate(4, urlCode = $$props.urlCode);
+    		if ("urlCode" in $$props) $$invalidate(5, urlCode = $$props.urlCode);
     		if ("inputTemplate" in $$props) $$invalidate(0, inputTemplate = $$props.inputTemplate);
     		if ("jsonOutput" in $$props) $$invalidate(1, jsonOutput = $$props.jsonOutput);
+    		if ("accessToken" in $$props) $$invalidate(2, accessToken = $$props.accessToken);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -633,6 +651,7 @@ var app = (function () {
     	return [
     		inputTemplate,
     		jsonOutput,
+    		accessToken,
     		saveFile,
     		refreshJson,
     		urlCode,
@@ -643,7 +662,7 @@ var app = (function () {
     class JsonGenerator extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, { urlCode: 4 });
+    		init(this, options, instance, create_fragment, safe_not_equal, { urlCode: 5 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -655,7 +674,7 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*urlCode*/ ctx[4] === undefined && !("urlCode" in props)) {
+    		if (/*urlCode*/ ctx[5] === undefined && !("urlCode" in props)) {
     			console_1.warn("<JsonGenerator> was created without expected prop 'urlCode'");
     		}
     	}

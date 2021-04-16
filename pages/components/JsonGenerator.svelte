@@ -1,12 +1,13 @@
 <script>
     import { onMount } from "svelte";
-    import  GitGenerateToken  from "../lib/GitGenerateToken.js"
+    import  GitGenerateToken from "../lib/GitGenerateToken.js"
 
     export let urlCode;
     const gitURL =
         "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
     let inputTemplate = "";
     let jsonOutput = "";
+    let accessToken=";"
 
     onMount(async function () {
         let response = await fetch(gitURL + "data/sample.hbs");
@@ -15,11 +16,10 @@
         jsonOutput = await response.text();
     });
 
-    function saveFile() {
+    async function saveFile() {
         console.log("Saving File ");
-        new GitGenerateToken(urlCode).then(data => {
-            console.log("Token is "+data.access_token);
-        });
+        let response = await new GitGenerateToken().getToken(urlCode);
+        accessToken = await response.access_token
     }
 
     function refreshJson() {
@@ -27,6 +27,7 @@
     }
 </script>
 
+<h1>Token is {accessToken}</h1>
 <main class="container">
     <header class="header">
         <h1 class="header-title">JSON Generator</h1>
