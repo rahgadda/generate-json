@@ -33,7 +33,7 @@
             encoding: "base64",
             message: "Updated From UI"
         }
-        response = await new GitUploadFile ().uploadTemplate(accessToken,data);
+        response = await new GitUploadFile().uploadTemplate(accessToken,data);
     }
 
     function refreshJson() {
