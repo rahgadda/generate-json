@@ -418,25 +418,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 42, 8, 1492);
+    			add_location(h1, file, 39, 8, 1366);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 41, 4, 1460);
-    			add_location(button0, file, 45, 8, 1584);
-    			add_location(button1, file, 46, 8, 1651);
+    			add_location(header, file, 38, 4, 1334);
+    			add_location(button0, file, 42, 8, 1458);
+    			add_location(button1, file, 43, 8, 1525);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 44, 4, 1555);
+    			add_location(div0, file, 41, 4, 1429);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 50, 12, 1761);
+    			add_location(textarea, file, 47, 12, 1635);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 49, 8, 1724);
+    			add_location(div1, file, 46, 8, 1598);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 53, 12, 1877);
+    			add_location(pre, file, 50, 12, 1751);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 52, 8, 1839);
+    			add_location(div2, file, 49, 8, 1713);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 48, 4, 1690);
+    			add_location(div3, file, 45, 4, 1564);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 40, 0, 1431);
+    			add_location(main, file, 37, 0, 1305);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -523,9 +523,7 @@ var app = (function () {
     				Accept: "application/json",
     				"Access-Control-Allow-Origin": "*"
     			}
-    		}).then(response => response.json()).then(data => data.access_token).catch(err => {
-    			console.error(err);
-    		});
+    		}).then(response => response.json()).then(data => data.access_token);
 
     		console.log(" Token " + data);
     	}

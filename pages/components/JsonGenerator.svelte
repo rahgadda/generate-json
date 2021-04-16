@@ -29,10 +29,7 @@
                                 },
                            })
                            .then((response) => response.json())
-                           .then((data) => data.access_token)
-                           .catch((err) => {
-                               console.error(err);
-                           });
+                           .then((data) => data.access_token);
 
         console.log(" Token "+data);
     }
