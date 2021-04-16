@@ -550,25 +550,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 47, 8, 1575);
+    			add_location(h1, file, 51, 8, 1801);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 46, 4, 1543);
-    			add_location(button0, file, 50, 8, 1667);
-    			add_location(button1, file, 51, 8, 1729);
+    			add_location(header, file, 50, 4, 1769);
+    			add_location(button0, file, 54, 8, 1893);
+    			add_location(button1, file, 55, 8, 1955);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 49, 4, 1638);
+    			add_location(div0, file, 53, 4, 1864);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 55, 12, 1862);
+    			add_location(textarea, file, 59, 12, 2088);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 54, 8, 1825);
+    			add_location(div1, file, 58, 8, 2051);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 58, 12, 1978);
+    			add_location(pre, file, 62, 12, 2204);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 57, 8, 1940);
+    			add_location(div2, file, 61, 8, 2166);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 53, 4, 1791);
+    			add_location(div3, file, 57, 4, 2017);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 45, 0, 1514);
+    			add_location(main, file, 49, 0, 1740);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -666,8 +666,12 @@ var app = (function () {
     		response = await new GitUploadFile().uploadTemplate(accessToken, data);
     	}
 
-    	function refreshJson() {
+    	async function refreshJson() {
     		console.log("Refersh JSON " + urlCode);
+    		let response = await fetch(gitURL + "data/sample.hbs");
+    		$$invalidate(0, inputTemplate = await response.text());
+    		response = await fetch(gitURL + "response/sample.json");
+    		$$invalidate(1, jsonOutput = await response.text());
     	}
 
     	const writable_props = ["urlCode"];

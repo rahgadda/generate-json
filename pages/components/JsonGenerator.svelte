@@ -36,8 +36,12 @@
         response = await new GitUploadFile().uploadTemplate(accessToken,data);
     }
 
-    function refreshJson() {
+    async function refreshJson() {
         console.log("Refersh JSON "+urlCode)
+        let response = await fetch(gitURL + "data/sample.hbs");
+        inputTemplate = await response.text();
+        response = await fetch(gitURL + "response/sample.json");
+        jsonOutput = await response.text();
     }
 </script>
 
