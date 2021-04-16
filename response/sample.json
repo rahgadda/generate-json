@@ -2,63 +2,23 @@
   "users": [
     {
       "id": 0,
-      "name": "Juliana Paquette",
-      "work": "Coolinga",
-      "email": "juliana.paquette@coolinga.eu",
-      "dob": "1978",
-      "address": "7 Radcliffe Road",
-      "city": "Cardiff",
+      "name": "Jetta Dampier",
+      "work": "MediaDime",
+      "email": "jetta.dampier@mediadime.xyz",
+      "dob": "1928",
+      "address": "19 Fairmont Avenue",
+      "city": "Bristol",
       "optedin": true
     },
     {
       "id": 1,
-      "name": "Raylene Matzen",
-      "work": "Tecomix",
-      "email": "raylene.matzen@tecomix.club",
-      "dob": "1994",
-      "address": "60 Grosvenor Square",
-      "city": "Boulder",
-      "optedin": true
-    },
-    {
-      "id": 2,
-      "name": "Maisha Karst",
-      "work": "Chromaton",
-      "email": "maisha.karst@chromaton.com",
-      "dob": "1919",
-      "address": "16 Wandle Street",
-      "city": "Rochester",
-      "optedin": true
-    },
-    {
-      "id": 3,
-      "name": "Francis Tuck",
-      "work": "Hassifix",
-      "email": "francis.tuck@hassifix.net",
-      "dob": "1925",
-      "address": "17 Tavistock Place",
-      "city": "Portland",
-      "optedin": false
-    },
-    {
-      "id": 4,
-      "name": "Jenette Raymond",
+      "name": "Joslyn Bickers",
       "work": "DuoServe",
-      "email": "jenette.raymond@duoserve.edu",
-      "dob": "1937",
-      "address": "35 Paxton Street",
-      "city": "Oakleigh",
+      "email": "joslyn.bickers@duoserve.info",
+      "dob": "1971",
+      "address": "91 Carter Street",
+      "city": "Charleston",
       "optedin": false
-    },
-    {
-      "id": 5,
-      "name": "Haydee Young",
-      "work": "FastFreight",
-      "email": "haydee.young@fastfreight.info",
-      "dob": "1924",
-      "address": "14 Fairmont Avenue",
-      "city": "Manchester",
-      "optedin": true
     }
   ],
   "images": [
@@ -67,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 42.80,
-    "y": -13.85
+    "x": 21.82,
+    "y": 14.96
   },
-  "price": "$67,718"
+  "price": "$39,776"
 }
