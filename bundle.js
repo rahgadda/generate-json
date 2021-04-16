@@ -379,13 +379,16 @@ var app = (function () {
     	let header;
     	let h1;
     	let t1;
+    	let button;
+    	let br;
+    	let t3;
     	let div2;
     	let div0;
     	let textarea;
-    	let t2;
+    	let t4;
     	let div1;
     	let pre;
-    	let t3;
+    	let t5;
     	let mounted;
     	let dispose;
 
@@ -396,29 +399,36 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "JSON Generator";
     			t1 = space();
+    			button = element("button");
+    			button.textContent = "Genearte Json";
+    			br = element("br");
+    			t3 = space();
     			div2 = element("div");
     			div0 = element("div");
     			textarea = element("textarea");
-    			t2 = space();
+    			t4 = space();
     			div1 = element("div");
     			pre = element("pre");
-    			t3 = text(/*jsonOutput*/ ctx[1]);
-    			attr_dev(h1, "class", "header-title svelte-upp9pz");
-    			add_location(h1, file, 63, 3, 1371);
-    			attr_dev(header, "class", "header svelte-upp9pz");
-    			add_location(header, file, 62, 1, 1344);
-    			attr_dev(textarea, "class", "source svelte-upp9pz");
-    			add_location(textarea, file, 67, 5, 1487);
-    			attr_dev(div0, "class", "left-panel svelte-upp9pz");
-    			add_location(div0, file, 66, 3, 1457);
-    			attr_dev(pre, "class", "output svelte-upp9pz");
-    			add_location(pre, file, 70, 5, 1595);
-    			attr_dev(div1, "class", "right-panel svelte-upp9pz");
-    			add_location(div1, file, 69, 3, 1564);
-    			attr_dev(div2, "class", "html-editor svelte-upp9pz");
-    			add_location(div2, file, 65, 1, 1428);
-    			attr_dev(main, "class", "container svelte-upp9pz");
-    			add_location(main, file, 61, 0, 1318);
+    			t5 = text(/*jsonOutput*/ ctx[1]);
+    			attr_dev(h1, "class", "header-title svelte-18diu03");
+    			add_location(h1, file, 67, 3, 1441);
+    			attr_dev(header, "class", "header svelte-18diu03");
+    			add_location(header, file, 66, 1, 1414);
+    			attr_dev(button, "class", "button svelte-18diu03");
+    			add_location(button, file, 69, 4, 1501);
+    			add_location(br, file, 69, 49, 1546);
+    			attr_dev(textarea, "class", "source svelte-18diu03");
+    			add_location(textarea, file, 72, 5, 1612);
+    			attr_dev(div0, "class", "left-panel svelte-18diu03");
+    			add_location(div0, file, 71, 3, 1582);
+    			attr_dev(pre, "class", "output svelte-18diu03");
+    			add_location(pre, file, 75, 5, 1720);
+    			attr_dev(div1, "class", "right-panel svelte-18diu03");
+    			add_location(div1, file, 74, 3, 1689);
+    			attr_dev(div2, "class", "html-editor svelte-18diu03");
+    			add_location(div2, file, 70, 1, 1553);
+    			attr_dev(main, "class", "container svelte-18diu03");
+    			add_location(main, file, 65, 0, 1388);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -428,14 +438,17 @@ var app = (function () {
     			append_dev(main, header);
     			append_dev(header, h1);
     			append_dev(main, t1);
+    			append_dev(main, button);
+    			append_dev(main, br);
+    			append_dev(main, t3);
     			append_dev(main, div2);
     			append_dev(div2, div0);
     			append_dev(div0, textarea);
     			set_input_value(textarea, /*inputTemplate*/ ctx[0]);
-    			append_dev(div2, t2);
+    			append_dev(div2, t4);
     			append_dev(div2, div1);
     			append_dev(div1, pre);
-    			append_dev(pre, t3);
+    			append_dev(pre, t5);
 
     			if (!mounted) {
     				dispose = listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[2]);
@@ -447,7 +460,7 @@ var app = (function () {
     				set_input_value(textarea, /*inputTemplate*/ ctx[0]);
     			}
 
-    			if (dirty & /*jsonOutput*/ 2) set_data_dev(t3, /*jsonOutput*/ ctx[1]);
+    			if (dirty & /*jsonOutput*/ 2) set_data_dev(t5, /*jsonOutput*/ ctx[1]);
     		},
     		i: noop,
     		o: noop,

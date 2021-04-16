@@ -1,5 +1,5 @@
 <style>
-	  .container{
+	.container{
         background: #ff3e00d6;
         padding:10px 30px;
     }
@@ -13,6 +13,10 @@
     .header-title {
         margin: 0;
         color:#fff;
+    }
+    .button{
+        display: flex;
+        align-items:flex-end;
     }
     .html-editor {
         width: 100%;
@@ -63,6 +67,7 @@
 	<header class="header">
 			<h1 class="header-title">JSON Generator</h1>
 	</header>
+    <button class="button">Genearte Json</button><br/>
 	<div class="html-editor">
 			<div class="left-panel">
 					<textarea bind:value={inputTemplate} class="source"></textarea>
