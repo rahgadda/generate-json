@@ -3,11 +3,20 @@
     import Login from './Login.svelte';
     import { onMount } from 'svelte';
 
+    let urlToken=null;
+
     onMount(() => {
         const parmas= new URLSearchParams(window.location.search)
-        console.log("Loaded with code = "+parmas.get("code"));
+        urlToken = parmas.get("code");
+        if(urlToken){
+            console.log("Loaded with code = "+urlToken);
+        }
     });
     
 </script>
 
-<Login />
+{#if urlToken}
+    <Login />
+{:else}
+    <JsonGenerator />
+{/if}
