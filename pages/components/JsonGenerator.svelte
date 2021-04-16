@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import  GitGenerateToken from "../lib/GitGenerateToken.js"
     import  GitGenerateSHAToken from "../lib/GitGenerateSHAToken.js"
+    import  GitUploadFile from "../lib/GitUploadFile.js"
 
     export let urlCode;
     const gitURL =

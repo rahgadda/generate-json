@@ -541,25 +541,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 46, 8, 1519);
+    			add_location(h1, file, 47, 8, 1582);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 45, 4, 1487);
-    			add_location(button0, file, 49, 8, 1611);
-    			add_location(button1, file, 50, 8, 1673);
+    			add_location(header, file, 46, 4, 1550);
+    			add_location(button0, file, 50, 8, 1674);
+    			add_location(button1, file, 51, 8, 1736);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 48, 4, 1582);
+    			add_location(div0, file, 49, 4, 1645);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 54, 12, 1806);
+    			add_location(textarea, file, 55, 12, 1869);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 53, 8, 1769);
+    			add_location(div1, file, 54, 8, 1832);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 57, 12, 1922);
+    			add_location(pre, file, 58, 12, 1985);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 56, 8, 1884);
+    			add_location(div2, file, 57, 8, 1947);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 52, 4, 1735);
+    			add_location(div3, file, 53, 4, 1798);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 44, 0, 1458);
+    			add_location(main, file, 45, 0, 1521);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -654,7 +654,7 @@ var app = (function () {
     			message: "Updated From UI"
     		};
 
-    		response = await new GitUploadFile().uploadTemplate(accessToken, data);
+    		response = await new GitGenerateSHAToken().uploadTemplate(accessToken, data);
     	}
 
     	function refreshJson() {
@@ -680,6 +680,7 @@ var app = (function () {
     		onMount,
     		GitGenerateToken,
     		GitGenerateSHAToken,
+    		GitUploadFile: GitGenerateSHAToken,
     		urlCode,
     		gitURL,
     		inputTemplate,
