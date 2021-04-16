@@ -1,20 +1,18 @@
 <script>
     import JsonGenerator from "./JsonGenerator.svelte";
     import Login from "./Login.svelte";
-    import { onMount } from "svelte";
 
-    let urlToken = null;
+    const parmas = new URLSearchParams(window.location.search);
+    let urlToken = parmas.get("code");
+    $: token = urlToken;
 
-    onMount(() => {
-        const parmas = new URLSearchParams(window.location.search);
-        urlToken = parmas.get("code");
-        if (urlToken) {
-            console.log("Loaded with code = " + urlToken);
-        }
-    });
+    if (token || urlToken) {
+        console.log("Loaded with code = " + urlToken);
+        console.log("token = "+token);
+    }
 </script>
 
-{#if { urlToken }}
+{#if { urlToken  }}
     <JsonGenerator />
 {:else}
     <Login />
