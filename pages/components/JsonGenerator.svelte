@@ -23,7 +23,8 @@
         const data = await fetch(gitApiURL + urlCode, {
                                 method: "POST",
                                 headers: {
-                                    Accept: "application/json"
+                                    Accept: "application/json",
+                                    'Access-Control-Allow-Origin':'*'
                                 },
                            })
                            .then((response) => response.json())
@@ -31,7 +32,7 @@
                            .catch((err) => {
                                console.error(err);
                            });
-                           
+
         console.log(" Token "+data);
     }
 </script>

@@ -418,25 +418,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 40, 8, 1399);
+    			add_location(h1, file, 41, 8, 1443);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 39, 4, 1367);
-    			add_location(button0, file, 43, 8, 1491);
-    			add_location(button1, file, 44, 8, 1558);
+    			add_location(header, file, 40, 4, 1411);
+    			add_location(button0, file, 44, 8, 1535);
+    			add_location(button1, file, 45, 8, 1602);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 42, 4, 1462);
+    			add_location(div0, file, 43, 4, 1506);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 48, 12, 1668);
+    			add_location(textarea, file, 49, 12, 1712);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 47, 8, 1631);
+    			add_location(div1, file, 48, 8, 1675);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 51, 12, 1784);
+    			add_location(pre, file, 52, 12, 1828);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 50, 8, 1746);
+    			add_location(div2, file, 51, 8, 1790);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 46, 4, 1597);
+    			add_location(div3, file, 47, 4, 1641);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 38, 0, 1338);
+    			add_location(main, file, 39, 0, 1382);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -518,7 +518,10 @@ var app = (function () {
 
     		const data = await fetch(gitApiURL + urlCode, {
     			method: "POST",
-    			headers: { Accept: "application/json" }
+    			headers: {
+    				Accept: "application/json",
+    				"Access-Control-Allow-Origin": "*"
+    			}
     		}).then(response => response.json()).then(data => data.access_token).catch(err => {
     			console.error(err);
     		});
