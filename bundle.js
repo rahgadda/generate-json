@@ -395,8 +395,7 @@ var app = (function () {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
-                    "Accept":"application/json",
-                    "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
+                    "Accept":"application/json"
                 },
                 body: JSON.stringify(data)
             });
@@ -418,7 +417,6 @@ var app = (function () {
                 headers: {
                     'Content-type': 'application/json',
                     "Accept":"application/json",
-                    "Access-Control-Allow-Origin": "https://5000-blue-python-linmq68o.ws-us03.gitpod.io"
                 }
             });
       
@@ -431,7 +429,7 @@ var app = (function () {
     }
 
     const http = new Fetch;
-    const gitAPIURL = "https://github.com/login/oauth/access_token?client_id=32748c79e2f3936ca0cb&client_secret=c871dbe5c837905a541c03d33fb44858c5973a8b&code=";
+    const gitAPIURL = "https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token?client_id=32748c79e2f3936ca0cb&client_secret=c871dbe5c837905a541c03d33fb44858c5973a8b&code=";
 
     class GitGenerateToken{
         constructor(code ){
