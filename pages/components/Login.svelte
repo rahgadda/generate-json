@@ -3,7 +3,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 <a
-    href="https://github.com/login/oauth/authorize?client_id=32748c79e2f3936ca0cb&scope=user:email"
+    href="https://github.com/login/oauth/authorize?client_id=32748c79e2f3936ca0cb&scope=repo"
     aria-label="Login with Github"
     class="centered fa fa-github"
 >

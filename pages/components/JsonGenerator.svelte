@@ -1,13 +1,15 @@
 <script>
     import { onMount } from "svelte";
     import  GitGenerateToken from "../lib/GitGenerateToken.js"
+    import  GitGenerateSHAToken from "../lib/GitGenerateSHAToken.js"
 
     export let urlCode;
     const gitURL =
         "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
     let inputTemplate = "";
     let jsonOutput = "";
-    let accessToken=";"
+    let accessToken="";
+    let shaToken="";
 
     onMount(async function () {
         let response = await fetch(gitURL + "data/sample.hbs");
@@ -19,7 +21,18 @@
     async function saveFile() {
         console.log("Saving File ");
         let response = await new GitGenerateToken().getToken(urlCode);
-        accessToken = await response.access_token
+        accessToken = await response.access_token;
+        response = await new GitGenerateSHAToken().getSHAToken(accessToken);
+        shaToken = await response;
+        let data = {
+            name: "sample.hbs",
+            path: "data/sample.hbs",
+            sha: shaToken,
+            content: btoa(inputTemplate),
+            encoding: "base64",
+            message: "Updated From UI"
+        }
+        response = await new GitUploadFile ().uploadTemplate(accessToken,data);
     }
 
     function refreshJson() {
@@ -28,6 +41,7 @@
 </script>
 
 <!-- <h1>Token is {accessToken}</h1> -->
+<!-- <h1>Token is {shaToken}</h1>  -->
 <main class="container">
     <header class="header">
         <h1 class="header-title">JSON Generator</h1>

@@ -386,6 +386,28 @@ var app = (function () {
             return resData;
         }
       
+        // Make an HTTP GET Request with Token as input
+        async getWithToken(url,token) {
+      
+            // Awaiting for fetch response
+            const response = await fetch(url,{
+                "method": "GET",
+                "headers": {
+                    "Authorization": "token "+token,
+                    "Accept": "application/vnd.github.v3+json"
+                }
+            });
+      
+            // Awaiting for response.json()
+            const data = await response.json();
+
+            // Awaiting for data.sha
+            const resData = await data.sha;
+      
+            // Returning result data
+            return resData;
+        }
+
         // Make an HTTP POST Request
         async post(url, data) {
       
@@ -408,7 +430,7 @@ var app = (function () {
             return resData;
         }
 
-        // Make an HTTP POST Request
+        // Make an HTTP POST Request with No Data
         async postNoData(url) {
       
             // Awaiting for fetch response and 
@@ -429,6 +451,28 @@ var app = (function () {
             // Returning result data
             return resData;
         }
+
+        // Make an HTTP POST Request
+        async postWithToken(url,token, data) {
+      
+            // Awaiting for fetch response and 
+            // defining method, headers and body  
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                    "Accept":"application/json",
+                    "Authorization": "token "+token,
+                },
+                body: JSON.stringify(data)
+            });
+      
+            // Awaiting response.json()
+            const resData = await response.json();
+      
+            // Returning result data
+            return resData;
+        }
     }
 
     const http = new Fetch;
@@ -437,6 +481,16 @@ var app = (function () {
     class GitGenerateToken{
         getToken(code){
             return (async () => await http.postNoData(gitAPIURL+code) )();
+        }
+    }
+
+    const http$1 = new Fetch;
+    const gitAPIURL$1 = "https://api.github.com/repos/rahgadda/generate-json/contents/data/sample.hbs";
+
+    class GitGenerateSHAToken {
+        getSHAToken(token){
+            console.log("Access Token in SHA "+token);
+            return (async () => await http$1.getWithToken(gitAPIURL$1,token) )();
         }
     }
 
@@ -487,25 +541,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 32, 8, 957);
+    			add_location(h1, file, 46, 8, 1519);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 31, 4, 925);
-    			add_location(button0, file, 35, 8, 1049);
-    			add_location(button1, file, 36, 8, 1111);
+    			add_location(header, file, 45, 4, 1487);
+    			add_location(button0, file, 49, 8, 1611);
+    			add_location(button1, file, 50, 8, 1673);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 34, 4, 1020);
+    			add_location(div0, file, 48, 4, 1582);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 40, 12, 1244);
+    			add_location(textarea, file, 54, 12, 1806);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 39, 8, 1207);
+    			add_location(div1, file, 53, 8, 1769);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 43, 12, 1360);
+    			add_location(pre, file, 57, 12, 1922);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 42, 8, 1322);
+    			add_location(div2, file, 56, 8, 1884);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 38, 4, 1173);
+    			add_location(div3, file, 52, 4, 1735);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 30, 0, 896);
+    			add_location(main, file, 44, 0, 1458);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -574,7 +628,8 @@ var app = (function () {
     	let { urlCode } = $$props;
     	let inputTemplate = "";
     	let jsonOutput = "";
-    	let accessToken = ";";
+    	let accessToken = "";
+    	let shaToken = "";
 
     	onMount(async function () {
     		let response = await fetch(gitURL + "data/sample.hbs");
@@ -587,6 +642,19 @@ var app = (function () {
     		console.log("Saving File ");
     		let response = await new GitGenerateToken().getToken(urlCode);
     		accessToken = await response.access_token;
+    		response = await new GitGenerateSHAToken().getSHAToken(accessToken);
+    		shaToken = await response;
+
+    		let data = {
+    			name: "sample.hbs",
+    			path: "data/sample.hbs",
+    			sha: shaToken,
+    			content: btoa(inputTemplate),
+    			encoding: "base64",
+    			message: "Updated From UI"
+    		};
+
+    		response = await new GitUploadFile().uploadTemplate(accessToken, data);
     	}
 
     	function refreshJson() {
@@ -611,11 +679,13 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		onMount,
     		GitGenerateToken,
+    		GitGenerateSHAToken,
     		urlCode,
     		gitURL,
     		inputTemplate,
     		jsonOutput,
     		accessToken,
+    		shaToken,
     		saveFile,
     		refreshJson
     	});
@@ -625,6 +695,7 @@ var app = (function () {
     		if ("inputTemplate" in $$props) $$invalidate(0, inputTemplate = $$props.inputTemplate);
     		if ("jsonOutput" in $$props) $$invalidate(1, jsonOutput = $$props.jsonOutput);
     		if ("accessToken" in $$props) accessToken = $$props.accessToken;
+    		if ("shaToken" in $$props) shaToken = $$props.shaToken;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -688,7 +759,7 @@ var app = (function () {
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
     			add_location(link, file$1, 0, 0, 0);
-    			attr_dev(a, "href", "https://github.com/login/oauth/authorize?client_id=32748c79e2f3936ca0cb&scope=user:email");
+    			attr_dev(a, "href", "https://github.com/login/oauth/authorize?client_id=32748c79e2f3936ca0cb&scope=repo");
     			attr_dev(a, "aria-label", "Login with Github");
     			attr_dev(a, "class", "centered fa fa-github svelte-1o3tlka");
     			add_location(a, file$1, 4, 0, 124);

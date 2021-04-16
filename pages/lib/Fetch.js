@@ -13,6 +13,28 @@ export default class Fetch{
         return resData;
     }
   
+    // Make an HTTP GET Request with Token as input
+    async getWithToken(url,token) {
+  
+        // Awaiting for fetch response
+        const response = await fetch(url,{
+            "method": "GET",
+            "headers": {
+                "Authorization": "token "+token,
+                "Accept": "application/vnd.github.v3+json"
+            }
+        });
+  
+        // Awaiting for response.json()
+        const data = await response.json();
+
+        // Awaiting for data.sha
+        const resData = await data.sha;
+  
+        // Returning result data
+        return resData;
+    }
+
     // Make an HTTP POST Request
     async post(url, data) {
   
@@ -35,7 +57,7 @@ export default class Fetch{
         return resData;
     }
 
-    // Make an HTTP POST Request
+    // Make an HTTP POST Request with No Data
     async postNoData(url) {
   
         // Awaiting for fetch response and 
@@ -53,6 +75,28 @@ export default class Fetch{
         const resData = await response.json();
         console.log("Result Data"+JSON.stringify(resData));
         
+        // Returning result data
+        return resData;
+    }
+
+    // Make an HTTP POST Request
+    async postWithToken(url,token, data) {
+  
+        // Awaiting for fetch response and 
+        // defining method, headers and body  
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+                "Accept":"application/json",
+                "Authorization": "token "+token,
+            },
+            body: JSON.stringify(data)
+        });
+  
+        // Awaiting response.json()
+        const resData = await response.json();
+  
         // Returning result data
         return resData;
     }
