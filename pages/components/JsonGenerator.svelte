@@ -24,8 +24,7 @@
                                 method: "POST",
                                 mode: 'no-cors',
                                 headers: {
-                                    Accept: "application/json",
-                                    'Access-Control-Allow-Origin':'*'
+                                    Accept: "application/json"
                                 },
                            })
                            .then((response) => response.json())
