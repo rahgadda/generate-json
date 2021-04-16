@@ -19,8 +19,6 @@
         console.log("Saving File ");
         new GitGenerateToken(urlCode).then(data => {
             console.log("Token is "+data.access_token);
-            this.token = data.access_token
-            return this.token;
         });
     }
 

@@ -487,25 +487,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 33, 8, 961);
+    			add_location(h1, file, 31, 8, 887);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 32, 4, 929);
-    			add_location(button0, file, 36, 8, 1053);
-    			add_location(button1, file, 37, 8, 1115);
+    			add_location(header, file, 30, 4, 855);
+    			add_location(button0, file, 34, 8, 979);
+    			add_location(button1, file, 35, 8, 1041);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 35, 4, 1024);
+    			add_location(div0, file, 33, 4, 950);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 41, 12, 1248);
+    			add_location(textarea, file, 39, 12, 1174);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 40, 8, 1211);
+    			add_location(div1, file, 38, 8, 1137);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 44, 12, 1364);
+    			add_location(pre, file, 42, 12, 1290);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 43, 8, 1326);
+    			add_location(div2, file, 41, 8, 1252);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 39, 4, 1177);
+    			add_location(div3, file, 37, 4, 1103);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 31, 0, 900);
+    			add_location(main, file, 29, 0, 826);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -587,8 +587,6 @@ var app = (function () {
 
     		new GitGenerateToken(urlCode).then(data => {
     			console.log("Token is " + data.access_token);
-    			this.token = data.access_token;
-    			return this.token;
     		});
     	}
 
