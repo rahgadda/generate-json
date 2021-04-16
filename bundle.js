@@ -550,25 +550,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 63, 8, 2125);
+    			add_location(h1, file, 75, 8, 2449);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 62, 4, 2093);
-    			add_location(button0, file, 66, 8, 2217);
-    			add_location(button1, file, 67, 8, 2279);
+    			add_location(header, file, 74, 4, 2417);
+    			add_location(button0, file, 78, 8, 2541);
+    			add_location(button1, file, 79, 8, 2603);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 65, 4, 2188);
+    			add_location(div0, file, 77, 4, 2512);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 71, 12, 2412);
+    			add_location(textarea, file, 83, 12, 2736);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 70, 8, 2375);
+    			add_location(div1, file, 82, 8, 2699);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 74, 12, 2528);
+    			add_location(pre, file, 86, 12, 2852);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 73, 8, 2490);
+    			add_location(div2, file, 85, 8, 2814);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 69, 4, 2341);
+    			add_location(div3, file, 81, 4, 2665);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 61, 0, 2064);
+    			add_location(main, file, 73, 0, 2388);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -641,9 +641,24 @@ var app = (function () {
     	let shaToken = "";
 
     	onMount(async function () {
-    		let response = await fetch(gitURL + "data/sample.hbs");
+    		let response = await fetch(gitURL + "data/sample.hbs", {
+    			"method": "GET",
+    			"headers": {
+    				"pragma": "no-cache",
+    				"cache-control": "no-cache"
+    			}
+    		});
+
     		$$invalidate(0, inputTemplate = await response.text());
-    		response = await fetch(gitURL + "response/sample.json");
+
+    		response = await fetch(gitURL + "response/sample.json", {
+    			"method": "GET",
+    			"headers": {
+    				"pragma": "no-cache",
+    				"cache-control": "no-cache"
+    			}
+    		});
+
     		$$invalidate(1, jsonOutput = await response.text());
     	});
 

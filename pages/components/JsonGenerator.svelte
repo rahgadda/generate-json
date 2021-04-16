@@ -13,9 +13,21 @@
     let shaToken="";
 
     onMount(async function () {
-        let response = await fetch(gitURL + "data/sample.hbs");
+        let response = await fetch(gitURL + "data/sample.hbs",{
+            "method": "GET",
+            "headers": {
+                'pragma': 'no-cache',
+                'cache-control': 'no-cache'
+            }
+        });
         inputTemplate = await response.text();
-        response = await fetch(gitURL + "response/sample.json");
+        response = await fetch(gitURL + "response/sample.json",{
+            "method": "GET",
+            "headers": {
+                'pragma': 'no-cache',
+                'cache-control': 'no-cache'
+            }
+        });
         jsonOutput = await response.text();
     });
 
