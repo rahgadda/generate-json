@@ -5,6 +5,6 @@ const gitAPIURL = "https://api.github.com/repos/rahgadda/generate-json/contents/
 
 export default class GitUploadFile {
     uploadTemplate(token,data){
-        return (async () => await http.postWithToken(gitAPIURL,token,data) )();
+        return (async () => await http.putWithToken(gitAPIURL,token,data) )();
     }
 }

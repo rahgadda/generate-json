@@ -453,12 +453,12 @@ var app = (function () {
         }
 
         // Make an HTTP POST Request
-        async postWithToken(url,token, data) {
+        async putWithToken(url,token, data) {
       
             // Awaiting for fetch response and 
             // defining method, headers and body  
             const response = await fetch(url, {
-                method: 'POST',
+                method: 'PUT',
                 headers: {
                     'Content-type': 'application/json',
                     "Accept":"application/json",
@@ -499,7 +499,7 @@ var app = (function () {
 
     class GitUploadFile {
         uploadTemplate(token,data){
-            return (async () => await http$2.postWithToken(gitAPIURL$2,token,data) )();
+            return (async () => await http$2.putWithToken(gitAPIURL$2,token,data) )();
         }
     }
 

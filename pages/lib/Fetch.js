@@ -80,12 +80,12 @@ export default class Fetch{
     }
 
     // Make an HTTP POST Request
-    async postWithToken(url,token, data) {
+    async putWithToken(url,token, data) {
   
         // Awaiting for fetch response and 
         // defining method, headers and body  
         const response = await fetch(url, {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'Content-type': 'application/json',
                 "Accept":"application/json",
