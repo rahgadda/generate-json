@@ -550,25 +550,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 75, 8, 2449);
+    			add_location(h1, file, 79, 8, 2669);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 74, 4, 2417);
-    			add_location(button0, file, 78, 8, 2541);
-    			add_location(button1, file, 79, 8, 2603);
+    			add_location(header, file, 78, 4, 2637);
+    			add_location(button0, file, 82, 8, 2761);
+    			add_location(button1, file, 83, 8, 2823);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 77, 4, 2512);
+    			add_location(div0, file, 81, 4, 2732);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 83, 12, 2736);
+    			add_location(textarea, file, 87, 12, 2956);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 82, 8, 2699);
+    			add_location(div1, file, 86, 8, 2919);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 86, 12, 2852);
+    			add_location(pre, file, 90, 12, 3072);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 85, 8, 2814);
+    			add_location(div2, file, 89, 8, 3034);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 81, 4, 2665);
+    			add_location(div3, file, 85, 4, 2885);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 73, 0, 2388);
+    			add_location(main, file, 77, 0, 2608);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -629,7 +629,7 @@ var app = (function () {
     	return block;
     }
 
-    const gitURL = "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
+    const gitURL = "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/rahgadda/generate-json/main/";
 
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -645,7 +645,8 @@ var app = (function () {
     			"method": "GET",
     			"headers": {
     				"pragma": "no-cache",
-    				"cache-control": "no-cache"
+    				"cache-control": "no-cache",
+    				"origin": "x-requested-with"
     			}
     		});
 
@@ -655,7 +656,8 @@ var app = (function () {
     			"method": "GET",
     			"headers": {
     				"pragma": "no-cache",
-    				"cache-control": "no-cache"
+    				"cache-control": "no-cache",
+    				"origin": "x-requested-with"
     			}
     		});
 
@@ -688,7 +690,8 @@ var app = (function () {
     			"method": "GET",
     			"headers": {
     				"pragma": "no-cache",
-    				"cache-control": "no-cache"
+    				"cache-control": "no-cache",
+    				"origin": "x-requested-with"
     			}
     		});
 
@@ -698,7 +701,8 @@ var app = (function () {
     			"method": "GET",
     			"headers": {
     				"pragma": "no-cache",
-    				"cache-control": "no-cache"
+    				"cache-control": "no-cache",
+    				"origin": "x-requested-with"
     			}
     		});
 

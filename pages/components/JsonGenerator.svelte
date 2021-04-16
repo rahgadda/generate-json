@@ -6,7 +6,7 @@
 
     export let urlCode;
     const gitURL =
-        "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
+        "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/rahgadda/generate-json/main/";
     let inputTemplate = "";
     let jsonOutput = "";
     let accessToken="";
@@ -17,7 +17,8 @@
             "method": "GET",
             "headers": {
                 'pragma': 'no-cache',
-                'cache-control': 'no-cache'
+                'cache-control': 'no-cache',
+                "origin": "x-requested-with"
             }
         });
         inputTemplate = await response.text();
@@ -25,7 +26,8 @@
             "method": "GET",
             "headers": {
                 'pragma': 'no-cache',
-                'cache-control': 'no-cache'
+                'cache-control': 'no-cache',
+                "origin": "x-requested-with"
             }
         });
         jsonOutput = await response.text();
@@ -54,7 +56,8 @@
             "method": "GET",
             "headers": {
                 'pragma': 'no-cache',
-                'cache-control': 'no-cache'
+                'cache-control': 'no-cache',
+                "origin": "x-requested-with"
             }
         });
         inputTemplate = await response.text();
@@ -62,7 +65,8 @@
             "method": "GET",
             "headers": {
                 'pragma': 'no-cache',
-                'cache-control': 'no-cache'
+                'cache-control': 'no-cache',
+                "origin": "x-requested-with"
             }
         });
         jsonOutput = await response.text();
