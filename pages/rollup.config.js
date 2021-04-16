@@ -1,4 +1,4 @@
-/ this file will not afect the sandbox but will
+// this file will not afect the sandbox but will
 // afect the deployment and dowload
 
 import svelte from "rollup-plugin-svelte";
