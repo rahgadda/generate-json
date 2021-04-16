@@ -15,11 +15,11 @@
     });
 
     function saveFile() {
-        console.log("Save File")
+        console.log("Save File "+urlCode)
     }
 
     function refreshJson() {
-        console.log("Refersh JSON")
+        console.log("Refersh JSON "+urlCode)
     }
 </script>
 

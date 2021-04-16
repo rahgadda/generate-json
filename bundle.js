@@ -418,25 +418,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 27, 8, 689);
+    			add_location(h1, file, 27, 8, 707);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 26, 4, 657);
-    			add_location(button0, file, 30, 8, 781);
-    			add_location(button1, file, 31, 8, 843);
+    			add_location(header, file, 26, 4, 675);
+    			add_location(button0, file, 30, 8, 799);
+    			add_location(button1, file, 31, 8, 861);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 29, 4, 752);
+    			add_location(div0, file, 29, 4, 770);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 35, 12, 976);
+    			add_location(textarea, file, 35, 12, 994);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 34, 8, 939);
+    			add_location(div1, file, 34, 8, 957);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 38, 12, 1092);
+    			add_location(pre, file, 38, 12, 1110);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 37, 8, 1054);
+    			add_location(div2, file, 37, 8, 1072);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 33, 4, 905);
+    			add_location(div3, file, 33, 4, 923);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 25, 0, 628);
+    			add_location(main, file, 25, 0, 646);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -462,9 +462,9 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", saveFile, false, false, false),
-    					listen_dev(button1, "click", refreshJson, false, false, false),
-    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[3])
+    					listen_dev(button0, "click", /*saveFile*/ ctx[2], false, false, false),
+    					listen_dev(button1, "click", /*refreshJson*/ ctx[3], false, false, false),
+    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[5])
     				];
 
     				mounted = true;
@@ -499,14 +499,6 @@ var app = (function () {
 
     const gitURL = "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
 
-    function saveFile() {
-    	console.log("Save File");
-    }
-
-    function refreshJson() {
-    	console.log("Refersh JSON");
-    }
-
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("JsonGenerator", slots, []);
@@ -521,6 +513,14 @@ var app = (function () {
     		$$invalidate(1, jsonOutput = await response.text());
     	});
 
+    	function saveFile() {
+    		console.log("Save File " + urlCode);
+    	}
+
+    	function refreshJson() {
+    		console.log("Refersh JSON " + urlCode);
+    	}
+
     	const writable_props = ["urlCode"];
 
     	Object.keys($$props).forEach(key => {
@@ -533,7 +533,7 @@ var app = (function () {
     	}
 
     	$$self.$$set = $$props => {
-    		if ("urlCode" in $$props) $$invalidate(2, urlCode = $$props.urlCode);
+    		if ("urlCode" in $$props) $$invalidate(4, urlCode = $$props.urlCode);
     	};
 
     	$$self.$capture_state = () => ({
@@ -547,7 +547,7 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("urlCode" in $$props) $$invalidate(2, urlCode = $$props.urlCode);
+    		if ("urlCode" in $$props) $$invalidate(4, urlCode = $$props.urlCode);
     		if ("inputTemplate" in $$props) $$invalidate(0, inputTemplate = $$props.inputTemplate);
     		if ("jsonOutput" in $$props) $$invalidate(1, jsonOutput = $$props.jsonOutput);
     	};
@@ -556,13 +556,20 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [inputTemplate, jsonOutput, urlCode, textarea_input_handler];
+    	return [
+    		inputTemplate,
+    		jsonOutput,
+    		saveFile,
+    		refreshJson,
+    		urlCode,
+    		textarea_input_handler
+    	];
     }
 
     class JsonGenerator extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, { urlCode: 2 });
+    		init(this, options, instance, create_fragment, safe_not_equal, { urlCode: 4 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -574,7 +581,7 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*urlCode*/ ctx[2] === undefined && !("urlCode" in props)) {
+    		if (/*urlCode*/ ctx[4] === undefined && !("urlCode" in props)) {
     			console_1.warn("<JsonGenerator> was created without expected prop 'urlCode'");
     		}
     	}
