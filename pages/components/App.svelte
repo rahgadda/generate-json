@@ -1,5 +1,4 @@
 <script>
-    import { is_empty } from "svelte/internal";
     import JsonGenerator from "./JsonGenerator.svelte";
     import Login from "./Login.svelte";
 

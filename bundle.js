@@ -625,7 +625,7 @@ var app = (function () {
 
     const { console: console_1 } = globals;
 
-    // (13:0) {:else}
+    // (12:0) {:else}
     function create_else_block(ctx) {
     	let login;
     	let current;
@@ -657,14 +657,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(13:0) {:else}",
+    		source: "(12:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (11:0) {#if urlToken}
+    // (10:0) {#if urlToken}
     function create_if_block(ctx) {
     	let jsongenerator;
     	let current;
@@ -696,7 +696,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(11:0) {#if urlToken}",
+    		source: "(10:0) {#if urlToken}",
     		ctx
     	});
 
@@ -771,14 +771,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({
-    		is_empty,
-    		JsonGenerator,
-    		Login,
-    		parmas,
-    		urlToken
-    	});
-
+    	$$self.$capture_state = () => ({ JsonGenerator, Login, parmas, urlToken });
     	return [urlToken];
     }
 
