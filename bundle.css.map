@@ -2,8 +2,8 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../JsonGenerator.svelte",
-    "../Login.svelte"
+    "JsonGenerator.svelte",
+    "Login.svelte"
   ],
   "sourcesContent": [
     "<style>\n\t  .container{\n        background: #ff3e00d6;\n        padding:10px 30px;\n    }\n    .header {\n        height: 10vh;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n\n    }\n    .header-title {\n        margin: 0;\n        color:#fff;\n    }\n    .html-editor {\n        width: 100%;\n        display: flex;\n        align-items:flex-start;\n        justify-content: space-evenly;\n    }\n    .left-panel, .right-panel {\n        width: 50%;\n        border: solid 1px black;\n        height: 85vh;\n        background: #ffffff;\n    }\n    .right-panel {\n        overflow: auto;\n    }\n    .source {\n        border: none;\n        width: 100%;\n        height: 100%;\n        background: #001628;\n        color: #83ba52;\n    }\n    .source:focus {\n        outline: none;\n    }\n    .output {\n        width: 100%;\n        padding: 0 2em;\n    }\n</style>\n\n<script>\n    import { onMount } from 'svelte';\n    const apiURL = \"https://raw.githubusercontent.com/rahgadda/generate-json/main/\";\n\t$: inputTemplate= \"\";\n    $: jsonOutput= \"\";\n\n    onMount(async function() {\n        let response = await fetch(apiURL+\"data/sample.hbs\");\n        inputTemplate = await response.text();\n        response = await fetch(apiURL+\"response/sample.json\");\n        jsonOutput = await response.text();\n    });\n</script>\n\n<main class=\"container\">\n\t<header class=\"header\">\n\t\t\t<h1 class=\"header-title\">JSON Generator</h1>\n\t</header>\n\t<div class=\"html-editor\">\n\t\t\t<div class=\"left-panel\">\n\t\t\t\t\t<textarea bind:value={inputTemplate} class=\"source\"></textarea>\n\t\t\t</div>\n\t\t\t<div class=\"right-panel\">\n\t\t\t\t\t<pre class=\"output\">{jsonOutput}</pre>\n\t\t\t</div>\n\t</div>\n</main>",
