@@ -22,7 +22,8 @@ export default class Fetch{
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
-                "Accept":"application/json"
+                "Accept":"application/json",
+                "origin": "x-requested-with"
             },
             body: JSON.stringify(data)
         });
@@ -44,12 +45,14 @@ export default class Fetch{
             headers: {
                 'Content-type': 'application/json',
                 "Accept":"application/json",
+                "origin": "x-requested-with"
             }
         });
   
         // Awaiting response.json()
         const resData = await response.json();
-  
+        console.log("Result Data"+JSON.stringify(resData));
+        
         // Returning result data
         return resData;
     }

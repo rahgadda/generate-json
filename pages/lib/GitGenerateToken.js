@@ -5,12 +5,6 @@ const gitAPIURL = "https://cors-anywhere.herokuapp.com/https://github.com/login/
 
 export default class GitGenerateToken{
     constructor(code ){
-        console.log(gitAPIURL);
-        http.postNoData(gitAPIURL+code)
-                .then(data => this.token = data );
-    }
-
-    getToken(){
-        return this.token;
+        http.postNoData(gitAPIURL+code);
     }
 }
