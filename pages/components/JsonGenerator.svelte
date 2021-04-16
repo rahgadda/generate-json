@@ -18,10 +18,12 @@
     });
 
     async function generateToken() {
+        console.log(" Token "+urlCode);
+
         const data = await fetch(gitApiURL + urlCode, {
-                                method: "GET",
+                                method: "POST",
                                 headers: {
-                                    Accept: "application/vnd.github.v3+json",
+                                    Accept: "application/json"
                                 },
                            })
                            .then((response) => response.json())
@@ -29,6 +31,7 @@
                            .catch((err) => {
                                console.error(err);
                            });
+                           
         console.log(" Token "+data);
     }
 </script>
@@ -38,7 +41,7 @@
         <h1 class="header-title">JSON Generator</h1>
     </header>
     <div class="button">
-        <button>&nbsp;Save&nbsp;</button>
+        <button on:click={generateToken}>&nbsp;Save&nbsp;</button>
         <button>Reload</button>
     </div>
     <div class="html-editor">
