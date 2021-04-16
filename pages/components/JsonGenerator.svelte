@@ -1,9 +1,7 @@
 <script>
     import { onMount } from "svelte";
-    // import { createOAuthAppAuth  } from "@octokit/auth-oauth-app";
 
     export let urlCode;
-
     const gitURL =
         "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
     let inputTemplate = "";
@@ -16,18 +14,12 @@
         jsonOutput = await response.text();
     });
 
-    async function generateToken() {
-        // const auth = createOAuthAppAuth({
-        //                 clientType: "oauth-app",
-        //                 clientId: "32748c79e2f3936ca0cb",
-        //                 clientSecret: "c871dbe5c837905a541c03d33fb44858c5973a8b",
-        //              });
-        // const userAuthenticationFromWebFlow = await auth({
-        //                                                 type: "oauth-user",
-        //                                                 code: urlCode
-        //                                             });
-        // console.log("Token is"+ userAuthenticationFromWebFlow.token);
-        
+    function saveFile() {
+        console.log("Save File")
+    }
+
+    function refreshJson() {
+        console.log("Refersh JSON")
     }
 </script>
 
@@ -36,8 +28,8 @@
         <h1 class="header-title">JSON Generator</h1>
     </header>
     <div class="button">
-        <button on:click={generateToken}>&nbsp;Save&nbsp;</button>
-        <button>Reload</button>
+        <button on:click={saveFile}>&nbsp;Save&nbsp;</button>
+        <button on:click={refreshJson}>Reload</button>
     </div>
     <div class="html-editor">
         <div class="left-panel">
