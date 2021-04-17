@@ -23,9 +23,7 @@
         response = await fetch(gitURL + "response/sample.json",{
             "method": "GET",
             "headers": {
-                'pragma': 'no-cache',
-                'cache-control': 'no-cache',
-                "origin": "x-requested-with"
+                'If-None-Match': ''
             }
         });
         jsonOutput = await response.text();
