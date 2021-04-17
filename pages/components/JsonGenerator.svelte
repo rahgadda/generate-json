@@ -6,7 +6,7 @@
 
     export let urlCode;
     const gitURL =
-        "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
+        "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/rahgadda/generate-json/main/";
     let inputTemplate = "";
     let jsonOutput = "";
     let accessToken="";
@@ -16,14 +16,16 @@
         let response = await fetch(gitURL + "data/sample.hbs",{
             "method": "GET",
             "headers": {
-                'If-None-Match': ''
+                'If-None-Match': '',
+                "origin": "x-requested-with"
             }
         });
         inputTemplate = await response.text();
         response = await fetch(gitURL + "response/sample.json",{
             "method": "GET",
             "headers": {
-                'If-None-Match': ''
+                'If-None-Match': '',
+                "origin": "x-requested-with"
             }
         });
         jsonOutput = await response.text();

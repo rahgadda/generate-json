@@ -550,25 +550,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 75, 8, 2449);
+    			add_location(h1, file, 77, 8, 2577);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 74, 4, 2417);
-    			add_location(button0, file, 78, 8, 2541);
-    			add_location(button1, file, 79, 8, 2603);
+    			add_location(header, file, 76, 4, 2545);
+    			add_location(button0, file, 80, 8, 2669);
+    			add_location(button1, file, 81, 8, 2731);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 77, 4, 2512);
+    			add_location(div0, file, 79, 4, 2640);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 83, 12, 2736);
+    			add_location(textarea, file, 85, 12, 2864);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 82, 8, 2699);
+    			add_location(div1, file, 84, 8, 2827);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 86, 12, 2852);
+    			add_location(pre, file, 88, 12, 2980);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 85, 8, 2814);
+    			add_location(div2, file, 87, 8, 2942);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 81, 4, 2665);
+    			add_location(div3, file, 83, 4, 2793);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 73, 0, 2388);
+    			add_location(main, file, 75, 0, 2516);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -629,7 +629,7 @@ var app = (function () {
     	return block;
     }
 
-    const gitURL = "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
+    const gitURL = "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/rahgadda/generate-json/main/";
 
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -643,14 +643,20 @@ var app = (function () {
     	onMount(async function () {
     		let response = await fetch(gitURL + "data/sample.hbs", {
     			"method": "GET",
-    			"headers": { "If-None-Match": "" }
+    			"headers": {
+    				"If-None-Match": "",
+    				"origin": "x-requested-with"
+    			}
     		});
 
     		$$invalidate(0, inputTemplate = await response.text());
 
     		response = await fetch(gitURL + "response/sample.json", {
     			"method": "GET",
-    			"headers": { "If-None-Match": "" }
+    			"headers": {
+    				"If-None-Match": "",
+    				"origin": "x-requested-with"
+    			}
     		});
 
     		$$invalidate(1, jsonOutput = await response.text());
