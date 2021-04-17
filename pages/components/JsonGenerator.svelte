@@ -6,7 +6,7 @@
 
     export let urlCode;
     const gitURL =
-        "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/rahgadda/generate-json/main/";
+        "https://raw.githubusercontent.com/rahgadda/generate-json/main/";
     let inputTemplate = "";
     let jsonOutput = "";
     let accessToken="";
@@ -23,12 +23,7 @@
         });
         inputTemplate = await response.text();
         response = await fetch(gitURL + "response/sample.json",{
-            "method": "GET",
-            "headers": {
-                'pragma': 'no-cache',
-                'cache-control': 'no-cache',
-                "origin": "x-requested-with"
-            }
+            "method": "GET"
         });
         jsonOutput = await response.text();
     });
@@ -53,21 +48,11 @@
     async function refreshJson() {
         console.log("Refersh JSON "+urlCode)
         let response = await fetch(gitURL + "data/sample.hbs",{
-            "method": "GET",
-            "headers": {
-                'pragma': 'no-cache',
-                'cache-control': 'no-cache',
-                "origin": "x-requested-with"
-            }
+            "method": "GET"
         });
         inputTemplate = await response.text();
         response = await fetch(gitURL + "response/sample.json",{
-            "method": "GET",
-            "headers": {
-                'pragma': 'no-cache',
-                'cache-control': 'no-cache',
-                "origin": "x-requested-with"
-            }
+            "method": "GET"
         });
         jsonOutput = await response.text();
     }
