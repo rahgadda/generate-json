@@ -2,72 +2,22 @@
   "users": [
     {
       "id": 0,
-      "name": "Neida Brandt",
-      "work": "Seelogic",
-      "email": "neida.brandt@seelogic.co",
-      "dob": "1988",
-      "address": "97 Hill Street",
-      "city": "Halifax",
+      "name": "Curtis Brier",
+      "work": "MultiServ",
+      "email": "curtis.brier@multiserv.name",
+      "dob": "1949",
+      "address": "22 Golden Lane",
+      "city": "Telford",
       "optedin": true
     },
     {
       "id": 1,
-      "name": "Shea Grieve",
-      "work": "SixtySix",
-      "email": "shea.grieve@sixtysix.xyz",
-      "dob": "1994",
-      "address": "84 Prospect Place",
-      "city": "Tacoma",
-      "optedin": true
-    },
-    {
-      "id": 2,
-      "name": "Janett Friedrich",
-      "work": "Kancom",
-      "email": "janett.friedrich@kancom.co",
-      "dob": "1926",
-      "address": "90 Prospect Place",
-      "city": "Auckland",
-      "optedin": false
-    },
-    {
-      "id": 3,
-      "name": "Edward Castleman",
-      "work": "Polygan",
-      "email": "edward.castleman@polygan.xyz",
-      "dob": "1942",
-      "address": "17 Crockett Street",
-      "city": "Redmond",
-      "optedin": false
-    },
-    {
-      "id": 4,
-      "name": "Roman Fennell",
-      "work": "Forecore",
-      "email": "roman.fennell@forecore.biz",
-      "dob": "1901",
-      "address": "5 Hinton Road",
-      "city": "Palmerston",
-      "optedin": true
-    },
-    {
-      "id": 5,
-      "name": "Jamie Pullman",
-      "work": "LoopSys",
-      "email": "jamie.pullman@loopsys.biz",
-      "dob": "1901",
-      "address": "76 Buckfield Lane",
-      "city": "Reno",
-      "optedin": false
-    },
-    {
-      "id": 6,
-      "name": "Raymond Backer",
-      "work": "CoreRobotics",
-      "email": "raymond.backer@corerobotics.mobi",
-      "dob": "1945",
-      "address": "70 Warner Street",
-      "city": "Detroit",
+      "name": "Jenna Brandt",
+      "work": "VenStrategy",
+      "email": "jenna.brandt@venstrategy.com",
+      "dob": "1931",
+      "address": "46 Wandle Street",
+      "city": "Boulder",
       "optedin": false
     }
   ],
@@ -77,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 17.78,
-    "y": -2.85
+    "x": 17.12,
+    "y": 2.67
   },
-  "price": "$20,443"
+  "price": "$7,974"
 }
