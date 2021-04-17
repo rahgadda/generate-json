@@ -16,14 +16,14 @@
         let response = await fetch(gitURL + "data/sample.hbs",{
             "method": "GET",
             "headers": {
-                'If-None-Match': 'aa'
+                'If-None-Match': ''
             }
         });
         inputTemplate = await response.text();
         response = await fetch(gitURL + "response/sample.json",{
             "method": "GET",
             "headers": {
-                'If-None-Match': 'aa'
+                'If-None-Match': ''
             }
         });
         jsonOutput = await response.text();

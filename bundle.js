@@ -550,25 +550,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 75, 8, 2453);
+    			add_location(h1, file, 75, 8, 2449);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 74, 4, 2421);
-    			add_location(button0, file, 78, 8, 2545);
-    			add_location(button1, file, 79, 8, 2607);
+    			add_location(header, file, 74, 4, 2417);
+    			add_location(button0, file, 78, 8, 2541);
+    			add_location(button1, file, 79, 8, 2603);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 77, 4, 2516);
+    			add_location(div0, file, 77, 4, 2512);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 83, 12, 2740);
+    			add_location(textarea, file, 83, 12, 2736);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 82, 8, 2703);
+    			add_location(div1, file, 82, 8, 2699);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 86, 12, 2856);
+    			add_location(pre, file, 86, 12, 2852);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 85, 8, 2818);
+    			add_location(div2, file, 85, 8, 2814);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 81, 4, 2669);
+    			add_location(div3, file, 81, 4, 2665);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 73, 0, 2392);
+    			add_location(main, file, 73, 0, 2388);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -643,14 +643,14 @@ var app = (function () {
     	onMount(async function () {
     		let response = await fetch(gitURL + "data/sample.hbs", {
     			"method": "GET",
-    			"headers": { "If-None-Match": "aa" }
+    			"headers": { "If-None-Match": "" }
     		});
 
     		$$invalidate(0, inputTemplate = await response.text());
 
     		response = await fetch(gitURL + "response/sample.json", {
     			"method": "GET",
-    			"headers": { "If-None-Match": "aa" }
+    			"headers": { "If-None-Match": "" }
     		});
 
     		$$invalidate(1, jsonOutput = await response.text());
