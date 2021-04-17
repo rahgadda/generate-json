@@ -16,7 +16,8 @@
         let response = await fetch(gitURL + "data/sample.hbs",{
             "method": "GET",
             "headers": {
-                'If-None-Match': 'aa',
+                'pragma': 'no-cache',
+                'cache-control': 'no-cache',
                 "origin": "x-requested-with"
             }
         });
@@ -24,7 +25,8 @@
         response = await fetch(gitURL + "response/sample.json",{
             "method": "GET",
             "headers": {
-                'If-None-Match': 'aa',
+                'pragma': 'no-cache',
+                'cache-control': 'no-cache',
                 "origin": "x-requested-with"
             }
         });
