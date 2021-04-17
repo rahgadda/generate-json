@@ -2,22 +2,32 @@
   "users": [
     {
       "id": 0,
-      "name": "Curtis Brier",
-      "work": "MultiServ",
-      "email": "curtis.brier@multiserv.name",
-      "dob": "1949",
-      "address": "22 Golden Lane",
-      "city": "Telford",
-      "optedin": true
+      "name": "Layla Chapman",
+      "work": "Forecore",
+      "email": "layla.chapman@forecore.com",
+      "dob": "1998",
+      "address": "58 Hinton Road",
+      "city": "Atlanta",
+      "optedin": false
     },
     {
       "id": 1,
-      "name": "Jenna Brandt",
-      "work": "VenStrategy",
-      "email": "jenna.brandt@venstrategy.com",
-      "dob": "1931",
-      "address": "46 Wandle Street",
-      "city": "Boulder",
+      "name": "Adam Keesee",
+      "work": "Haltheon",
+      "email": "adam.keesee@haltheon.name",
+      "dob": "1940",
+      "address": "59 Taylor Street",
+      "city": "Denver",
+      "optedin": false
+    },
+    {
+      "id": 2,
+      "name": "Travis Higgins",
+      "work": "Cirpria",
+      "email": "travis.higgins@cirpria.co",
+      "dob": "1966",
+      "address": "60 Stockton Lane",
+      "city": "Sacramento",
       "optedin": false
     }
   ],
@@ -27,8 +37,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 17.12,
-    "y": 2.67
+    "x": 28.41,
+    "y": 1.89
   },
-  "price": "$7,974"
+  "price": "$84,700"
 }
