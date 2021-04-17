@@ -14,12 +14,7 @@
 
     onMount(async function () {
         let response = await fetch(gitURL + "data/sample.hbs",{
-            "method": "GET",
-            "headers": {
-                'pragma': 'no-cache',
-                'cache-control': 'no-cache',
-                "origin": "x-requested-with"
-            }
+            "method": "GET"
         });
         inputTemplate = await response.text();
         response = await fetch(gitURL + "response/sample.json",{
