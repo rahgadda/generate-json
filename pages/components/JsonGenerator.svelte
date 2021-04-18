@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import  GitGenerateToken from "../lib/GitGenerateToken.js";
     import  GitGenerateSHAToken from "../lib/GitGenerateSHAToken.js";
+    import  GitGetData from "../lib/GitGetData.js";
     import  GitUploadFile from "../lib/GitUploadFile.js";
     import { access_token } from '../lib/store.js';
 
@@ -14,14 +15,7 @@
     let shaToken="";
 
     onMount(async function () {
-        let response = await fetch(gitURL + "data/sample.hbs",{
-            "method": "GET"
-        });
-        inputTemplate = await response.text();
-        response = await fetch(gitURL + "response/sample.json",{
-            "method": "GET"
-        });
-        jsonOutput = await response.text();
+        await refreshJson();
         accessToken=$access_token;
     });
 
@@ -51,14 +45,8 @@
 
     async function refreshJson() {
         console.log("Refersh JSON ")
-        let response = await fetch(gitURL + "data/sample.hbs",{
-            "method": "GET"
-        });
-        inputTemplate = await response.text();
-        response = await fetch(gitURL + "response/sample.json",{
-            "method": "GET"
-        });
-        jsonOutput = await response.text();
+        inputTemplate = await GitGetData.getBase64Data("data/sample.hbs");
+        jsonOutput = await GitGetData.getBase64Data("response/sample.json");
     }
 </script>
 

@@ -12,6 +12,25 @@ export default class Fetch{
         // Returning result data
         return resData;
     }
+
+    // Make an HTTP GET Request 
+    async getBase64Data(url) {
+  
+        // Awaiting for fetch response
+        const response = await fetch(url);
+  
+        // Awaiting for response.json()
+        const data = await response.json();
+  
+        // Getting content
+        const base64Data = await data.content;
+
+        //Decoding Data
+        const resData = await window.atob(base64Data);
+
+        // Returning result data
+        return resData;
+    }
   
     // Make an HTTP GET Request with Token as input
     async getWithToken(url,token) {

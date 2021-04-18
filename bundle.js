@@ -413,6 +413,25 @@ var app = (function () {
             // Returning result data
             return resData;
         }
+
+        // Make an HTTP GET Request 
+        async getBase64Data(url) {
+      
+            // Awaiting for fetch response
+            const response = await fetch(url);
+      
+            // Awaiting for response.json()
+            const data = await response.json();
+      
+            // Getting content
+            const base64Data = await data.content;
+
+            //Decoding Data
+            const resData = await window.atob(base64Data);
+
+            // Returning result data
+            return resData;
+        }
       
         // Make an HTTP GET Request with Token as input
         async getWithToken(url,token) {
@@ -523,11 +542,20 @@ var app = (function () {
     }
 
     const http$2 = new Fetch;
-    const gitAPIURL$2 = "https://api.github.com/repos/rahgadda/generate-json/contents/data/sample.hbs";
+    const gitAPIURL$2 = "https://api.github.com/repos/rahgadda/generate-json/contents/";
+
+    class GitGetData{
+        getToken(code){
+            return (async () => await http$2.getBase64Data(gitAPIURL$2+code) )();
+        }
+    }
+
+    const http$3 = new Fetch;
+    const gitAPIURL$3 = "https://api.github.com/repos/rahgadda/generate-json/contents/data/sample.hbs";
 
     class GitUploadFile {
         uploadTemplate(token,data){
-            return (async () => await http$2.putWithToken(gitAPIURL$2,token,data) )();
+            return (async () => await http$3.putWithToken(gitAPIURL$3,token,data) )();
         }
     }
 
@@ -632,25 +660,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 68, 8, 2285);
+    			add_location(h1, file, 56, 8, 1918);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 67, 4, 2253);
-    			add_location(button0, file, 71, 8, 2377);
-    			add_location(button1, file, 72, 8, 2439);
+    			add_location(header, file, 55, 4, 1886);
+    			add_location(button0, file, 59, 8, 2010);
+    			add_location(button1, file, 60, 8, 2072);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 70, 4, 2348);
+    			add_location(div0, file, 58, 4, 1981);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 76, 12, 2572);
+    			add_location(textarea, file, 64, 12, 2205);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 75, 8, 2535);
+    			add_location(div1, file, 63, 8, 2168);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 79, 12, 2688);
+    			add_location(pre, file, 67, 12, 2321);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 78, 8, 2650);
+    			add_location(div2, file, 66, 8, 2283);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 74, 4, 2501);
+    			add_location(div3, file, 62, 4, 2134);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 66, 0, 2224);
+    			add_location(main, file, 54, 0, 1857);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -726,10 +754,7 @@ var app = (function () {
     	let shaToken = "";
 
     	onMount(async function () {
-    		let response = await fetch(gitURL + "data/sample.hbs", { "method": "GET" });
-    		$$invalidate(0, inputTemplate = await response.text());
-    		response = await fetch(gitURL + "response/sample.json", { "method": "GET" });
-    		$$invalidate(1, jsonOutput = await response.text());
+    		await refreshJson();
     		accessToken = $access_token;
     	});
 
@@ -763,10 +788,8 @@ var app = (function () {
 
     	async function refreshJson() {
     		console.log("Refersh JSON ");
-    		let response = await fetch(gitURL + "data/sample.hbs", { "method": "GET" });
-    		$$invalidate(0, inputTemplate = await response.text());
-    		response = await fetch(gitURL + "response/sample.json", { "method": "GET" });
-    		$$invalidate(1, jsonOutput = await response.text());
+    		$$invalidate(0, inputTemplate = await GitGetData.getBase64Data("data/sample.hbs"));
+    		$$invalidate(1, jsonOutput = await GitGetData.getBase64Data("response/sample.json"));
     	}
 
     	const writable_props = ["urlCode"];
@@ -788,6 +811,7 @@ var app = (function () {
     		onMount,
     		GitGenerateToken,
     		GitGenerateSHAToken,
+    		GitGetData,
     		GitUploadFile,
     		access_token,
     		urlCode,
