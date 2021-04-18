@@ -2,43 +2,23 @@
   "users": [
     {
       "id": 0,
-      "name": "Stephen Oldman",
-      "work": "Cameratek",
-      "email": "stephen.oldman@cameratek.name",
-      "dob": "1947",
-      "address": "93 Randolph Street",
-      "city": "Tacoma",
-      "optedin": false
+      "name": "Kathy Dunham",
+      "work": "Amsquare",
+      "email": "kathy.dunham@amsquare.net",
+      "dob": "1951",
+      "address": "21 Bramble Lane",
+      "city": "Sudbury",
+      "optedin": true
     },
     {
       "id": 1,
-      "name": "Rikki Sager",
-      "work": "Tomiatech",
-      "email": "rikki.sager@tomiatech.info",
-      "dob": "1927",
-      "address": "22 Green Street",
-      "city": "Aspen",
-      "optedin": false
-    },
-    {
-      "id": 2,
-      "name": "Adam Verde",
-      "work": "MultiLingua",
-      "email": "adam.verde@multilingua.org",
-      "dob": "1978",
-      "address": "18 Winston Road",
-      "city": "Manchester",
-      "optedin": false
-    },
-    {
-      "id": 3,
-      "name": "Haley Neal",
-      "work": "Conixco",
-      "email": "haley.neal@conixco.club",
-      "dob": "1965",
-      "address": "22 Glenn Drive",
-      "city": "London",
-      "optedin": false
+      "name": "Lloyd Schaefer",
+      "work": "Infratouch",
+      "email": "lloyd.schaefer@infratouch.org",
+      "dob": "1903",
+      "address": "41 Hudson Street",
+      "city": "Sudbury",
+      "optedin": true
     }
   ],
   "images": [
@@ -47,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 35.16,
-    "y": -23.97
+    "x": 5.01,
+    "y": 19.66
   },
-  "price": "$98,581"
+  "price": "$67,771"
 }
