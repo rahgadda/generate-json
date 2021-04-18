@@ -11,8 +11,6 @@
     const urlCode = parmas.get("code");
 </script>
 
-<h1>{$access_token}</h1>
-
 {#if $access_token || urlCode}
     <JsonGenerator {urlCode} />
 {:else}
