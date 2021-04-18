@@ -2,22 +2,32 @@
   "users": [
     {
       "id": 0,
-      "name": "Kathy Dunham",
-      "work": "Amsquare",
-      "email": "kathy.dunham@amsquare.net",
-      "dob": "1951",
-      "address": "21 Bramble Lane",
-      "city": "Sudbury",
+      "name": "Gavin Charley",
+      "work": "Dalserve",
+      "email": "gavin.charley@dalserve.info",
+      "dob": "1966",
+      "address": "45 Gartland Street",
+      "city": "Pheonix",
       "optedin": true
     },
     {
       "id": 1,
-      "name": "Lloyd Schaefer",
-      "work": "Infratouch",
-      "email": "lloyd.schaefer@infratouch.org",
-      "dob": "1903",
-      "address": "41 Hudson Street",
-      "city": "Sudbury",
+      "name": "Michael Rikard",
+      "work": "TrioSys",
+      "email": "michael.rikard@triosys.info",
+      "dob": "1941",
+      "address": "99 Rivington Street",
+      "city": "Albany",
+      "optedin": true
+    },
+    {
+      "id": 2,
+      "name": "Craig Garling",
+      "work": "Qualcore",
+      "email": "craig.garling@qualcore.biz",
+      "dob": "1902",
+      "address": "8 Fuller Road",
+      "city": "Oxford",
       "optedin": true
     }
   ],
@@ -27,8 +37,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 5.01,
-    "y": 19.66
+    "x": -37.73,
+    "y": -3.02
   },
-  "price": "$67,771"
+  "price": "$88,641"
 }
