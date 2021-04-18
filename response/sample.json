@@ -2,53 +2,23 @@
   "users": [
     {
       "id": 0,
-      "name": "Richelle Rikard",
-      "work": "Tomiatech",
-      "email": "richelle.rikard@tomiatech.name",
-      "dob": "1969",
-      "address": "32 Stockton Lane",
-      "city": "Albany",
-      "optedin": true
+      "name": "Miles Turner",
+      "work": "CoreRobotics",
+      "email": "miles.turner@corerobotics.co",
+      "dob": "1965",
+      "address": "67 Glenn Drive",
+      "city": "Baltimore",
+      "optedin": false
     },
     {
       "id": 1,
-      "name": "Roselyn Durrett",
-      "work": "Maxcast",
-      "email": "roselyn.durrett@maxcast.club",
-      "dob": "1914",
-      "address": "16 Pearl Street",
-      "city": "Brighton",
+      "name": "Shea Latshaw",
+      "work": "Dynaroc",
+      "email": "shea.latshaw@dynaroc.me",
+      "dob": "1957",
+      "address": "45 Dunstable Street",
+      "city": "Aspen",
       "optedin": false
-    },
-    {
-      "id": 2,
-      "name": "Warren Dunham",
-      "work": "Eluxa",
-      "email": "warren.dunham@eluxa.com",
-      "dob": "1927",
-      "address": "22 Glenn Drive",
-      "city": "Canterbury",
-      "optedin": true
-    },
-    {
-      "id": 3,
-      "name": "Tyler Brandt",
-      "work": "NitroSystems",
-      "email": "tyler.brandt@nitrosystems.gov",
-      "dob": "1900",
-      "address": "44 Radcliffe Road",
-      "city": "Hartford",
-      "optedin": false
-    },
-    {
-      "id": 4,
-      "name": "Cory Carter",
-      "work": "Polygan",
-      "email": "cory.carter@polygan.club",
-      "dob": "1906",
-      "address": "58 Wooster Road",
-      "city": "Bakersfield",
-      "optedin": true
     }
   ],
   "images": [
@@ -57,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 2.91,
-    "y": 14.59
+    "x": 2.51,
+    "y": 13.71
   },
-  "price": "$37,517"
+  "price": "$28,142"
 }
