@@ -632,25 +632,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 62, 8, 2092);
+    			add_location(h1, file, 65, 8, 2158);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 61, 4, 2060);
-    			add_location(button0, file, 65, 8, 2184);
-    			add_location(button1, file, 66, 8, 2246);
+    			add_location(header, file, 64, 4, 2126);
+    			add_location(button0, file, 68, 8, 2250);
+    			add_location(button1, file, 69, 8, 2312);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 64, 4, 2155);
+    			add_location(div0, file, 67, 4, 2221);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 70, 12, 2379);
+    			add_location(textarea, file, 73, 12, 2445);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 69, 8, 2342);
+    			add_location(div1, file, 72, 8, 2408);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 73, 12, 2495);
+    			add_location(pre, file, 76, 12, 2561);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 72, 8, 2457);
+    			add_location(div2, file, 75, 8, 2523);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 68, 4, 2308);
+    			add_location(div3, file, 71, 4, 2374);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 60, 0, 2031);
+    			add_location(main, file, 63, 0, 2097);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -735,9 +735,14 @@ var app = (function () {
 
     	async function saveFile() {
     		console.log("Saving File ");
-    		let response = await new GitGenerateToken().getToken(urlCode);
-    		accessToken = await response.access_token;
-    		access_token.set(accessToken);
+    		let response;
+
+    		if (accessToken) {
+    			response = await new GitGenerateToken().getToken(urlCode);
+    			accessToken = await response.access_token;
+    			access_token.set(accessToken);
+    		}
+
     		response = await new GitGenerateSHAToken().getSHAToken(accessToken);
     		shaToken = await response;
 

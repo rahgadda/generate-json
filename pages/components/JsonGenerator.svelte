@@ -27,9 +27,12 @@
 
     async function saveFile() {
         console.log("Saving File ");
-        let response = await new GitGenerateToken().getToken(urlCode);
-        accessToken = await response.access_token;
-        access_token.set(accessToken);
+        let response;
+        if (accessToken){
+            response = await new GitGenerateToken().getToken(urlCode);
+            accessToken = await response.access_token;
+            access_token.set(accessToken);
+        }
         response = await new GitGenerateSHAToken().getSHAToken(accessToken);
         shaToken = await response;
         let data = {
