@@ -965,7 +965,7 @@ var app = (function () {
     	return block;
     }
 
-    // (16:0) {#if $access_token}
+    // (16:0) {#if $access_token || urlCode}
     function create_if_block(ctx) {
     	let jsongenerator;
     	let current;
@@ -1002,7 +1002,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(16:0) {#if $access_token}",
+    		source: "(16:0) {#if $access_token || urlCode}",
     		ctx
     	});
 
@@ -1021,7 +1021,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$access_token*/ ctx[0]) return 0;
+    		if (/*$access_token*/ ctx[0] || /*urlCode*/ ctx[1]) return 0;
     		return 1;
     	}
 

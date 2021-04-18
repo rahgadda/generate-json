@@ -13,7 +13,7 @@
 
 <h1>{$access_token}</h1>
 
-{#if $access_token}
+{#if $access_token || urlCode}
     <JsonGenerator {urlCode} />
 {:else}
     <Login />
