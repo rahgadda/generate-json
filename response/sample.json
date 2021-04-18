@@ -2,23 +2,33 @@
   "users": [
     {
       "id": 0,
-      "name": "Miles Turner",
-      "work": "CoreRobotics",
-      "email": "miles.turner@corerobotics.co",
-      "dob": "1965",
-      "address": "67 Glenn Drive",
-      "city": "Baltimore",
+      "name": "Janett Pendergast",
+      "work": "CoreMax",
+      "email": "janett.pendergast@coremax.name",
+      "dob": "1990",
+      "address": "50 Main Street",
+      "city": "Detroit",
       "optedin": false
     },
     {
       "id": 1,
-      "name": "Shea Latshaw",
-      "work": "Dynaroc",
-      "email": "shea.latshaw@dynaroc.me",
-      "dob": "1957",
-      "address": "45 Dunstable Street",
-      "city": "Aspen",
+      "name": "Miles Brier",
+      "work": "Acousticom",
+      "email": "miles.brier@acousticom.org",
+      "dob": "1920",
+      "address": "77 Wandle Street",
+      "city": "Sheffield",
       "optedin": false
+    },
+    {
+      "id": 2,
+      "name": "Chloe Rohloff",
+      "work": "Playtech",
+      "email": "chloe.rohloff@playtech.gov",
+      "dob": "1998",
+      "address": "13 Bramble Lane",
+      "city": "Albany",
+      "optedin": true
     }
   ],
   "images": [
@@ -27,8 +37,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 2.51,
-    "y": 13.71
+    "x": 36.04,
+    "y": 24.48
   },
-  "price": "$28,142"
+  "price": "$65,137"
 }
