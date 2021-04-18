@@ -517,7 +517,7 @@ var app = (function () {
 
     class GitGenerateSHAToken {
         getSHAToken(token){
-            console.log("Access Token in SHA "+token);
+            //console.log("Access Token in SHA "+token);
             return (async () => await http$1.getWithToken(gitAPIURL$1,token) )();
         }
     }
@@ -632,25 +632,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 68, 8, 2293);
+    			add_location(h1, file, 68, 8, 2285);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 67, 4, 2261);
-    			add_location(button0, file, 71, 8, 2385);
-    			add_location(button1, file, 72, 8, 2447);
+    			add_location(header, file, 67, 4, 2253);
+    			add_location(button0, file, 71, 8, 2377);
+    			add_location(button1, file, 72, 8, 2439);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 70, 4, 2356);
+    			add_location(div0, file, 70, 4, 2348);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 76, 12, 2580);
+    			add_location(textarea, file, 76, 12, 2572);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 75, 8, 2543);
+    			add_location(div1, file, 75, 8, 2535);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 79, 12, 2696);
+    			add_location(pre, file, 79, 12, 2688);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 78, 8, 2658);
+    			add_location(div2, file, 78, 8, 2650);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 74, 4, 2509);
+    			add_location(div3, file, 74, 4, 2501);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 66, 0, 2232);
+    			add_location(main, file, 66, 0, 2224);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -762,7 +762,7 @@ var app = (function () {
     	}
 
     	async function refreshJson() {
-    		console.log("Refersh JSON " + urlCode);
+    		console.log("Refersh JSON ");
     		let response = await fetch(gitURL + "data/sample.hbs", { "method": "GET" });
     		$$invalidate(0, inputTemplate = await response.text());
     		response = await fetch(gitURL + "response/sample.json", { "method": "GET" });

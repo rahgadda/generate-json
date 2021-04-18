@@ -5,7 +5,7 @@ const gitAPIURL = "https://api.github.com/repos/rahgadda/generate-json/contents/
 
 export default class GitGenerateSHAToken {
     getSHAToken(token){
-        console.log("Access Token in SHA "+token);
+        //console.log("Access Token in SHA "+token);
         return (async () => await http.getWithToken(gitAPIURL,token) )();
     }
 }

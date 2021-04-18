@@ -50,7 +50,7 @@
     }
 
     async function refreshJson() {
-        console.log("Refersh JSON "+urlCode)
+        console.log("Refersh JSON ")
         let response = await fetch(gitURL + "data/sample.hbs",{
             "method": "GET"
         });
