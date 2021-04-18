@@ -2,32 +2,22 @@
   "users": [
     {
       "id": 0,
-      "name": "Janett Pendergast",
-      "work": "CoreMax",
-      "email": "janett.pendergast@coremax.name",
-      "dob": "1990",
-      "address": "50 Main Street",
-      "city": "Detroit",
-      "optedin": false
+      "name": "Florance Rebelo",
+      "work": "Hivemind",
+      "email": "florance.rebelo@hivemind.club",
+      "dob": "1943",
+      "address": "8 Crawford Street",
+      "city": "Lewisburg",
+      "optedin": true
     },
     {
       "id": 1,
-      "name": "Miles Brier",
-      "work": "Acousticom",
-      "email": "miles.brier@acousticom.org",
-      "dob": "1920",
-      "address": "77 Wandle Street",
-      "city": "Sheffield",
-      "optedin": false
-    },
-    {
-      "id": 2,
-      "name": "Chloe Rohloff",
-      "work": "Playtech",
-      "email": "chloe.rohloff@playtech.gov",
-      "dob": "1998",
-      "address": "13 Bramble Lane",
-      "city": "Albany",
+      "name": "Victoria Fennell",
+      "work": "Solexis",
+      "email": "victoria.fennell@solexis.me",
+      "dob": "1937",
+      "address": "9 Fairmont Avenue",
+      "city": "Colchester",
       "optedin": true
     }
   ],
@@ -37,8 +27,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 36.04,
-    "y": 24.48
+    "x": 45.86,
+    "y": 13.89
   },
-  "price": "$65,137"
+  "price": "$589"
 }
