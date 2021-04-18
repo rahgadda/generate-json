@@ -1,8 +1,9 @@
 <script>
     import { onMount } from "svelte";
-    import  GitGenerateToken from "../lib/GitGenerateToken.js"
-    import  GitGenerateSHAToken from "../lib/GitGenerateSHAToken.js"
-    import  GitUploadFile from "../lib/GitUploadFile.js"
+    import  GitGenerateToken from "../lib/GitGenerateToken.js";
+    import  GitGenerateSHAToken from "../lib/GitGenerateSHAToken.js";
+    import  GitUploadFile from "../lib/GitUploadFile.js";
+    import { access_token } from '../lib/store.js';
 
     export let urlCode;
     const gitURL =
@@ -21,12 +22,14 @@
             "method": "GET"
         });
         jsonOutput = await response.text();
+        accessToken={$access_token};
     });
 
     async function saveFile() {
         console.log("Saving File ");
         let response = await new GitGenerateToken().getToken(urlCode);
         accessToken = await response.access_token;
+        access_token.set(accessToken);
         response = await new GitGenerateSHAToken().getSHAToken(accessToken);
         shaToken = await response;
         let data = {
