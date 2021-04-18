@@ -19,4 +19,5 @@
 
 ## Demo
 - [Live URL](https://rahulkirangaddam.is-a.dev/generate-json/)
-[Demo](./images/02-Demo.gif)
+
+![Demo](./images/02-Demo.gif)
