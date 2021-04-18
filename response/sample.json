@@ -2,52 +2,32 @@
   "users": [
     {
       "id": 0,
-      "name": "Richelle Rikard",
-      "work": "Tomiatech",
-      "email": "richelle.rikard@tomiatech.name",
-      "dob": "1969",
-      "address": "32 Stockton Lane",
-      "city": "Albany",
+      "name": "Raisa Luck",
+      "work": "Unilogic",
+      "email": "raisa.luck@unilogic.com",
+      "dob": "1970",
+      "address": "48 Randolph Street",
+      "city": "Newark",
       "optedin": true
     },
     {
       "id": 1,
-      "name": "Roselyn Durrett",
-      "work": "Maxcast",
-      "email": "roselyn.durrett@maxcast.club",
-      "dob": "1914",
-      "address": "16 Pearl Street",
-      "city": "Brighton",
+      "name": "Leanne Dampier",
+      "work": "Hivemind",
+      "email": "leanne.dampier@hivemind.com",
+      "dob": "1999",
+      "address": "76 Sherman Road",
+      "city": "Oxford",
       "optedin": false
     },
     {
       "id": 2,
-      "name": "Warren Dunham",
-      "work": "Eluxa",
-      "email": "warren.dunham@eluxa.com",
-      "dob": "1927",
-      "address": "22 Glenn Drive",
-      "city": "Canterbury",
-      "optedin": true
-    },
-    {
-      "id": 3,
-      "name": "Tyler Brandt",
-      "work": "NitroSystems",
-      "email": "tyler.brandt@nitrosystems.gov",
-      "dob": "1900",
-      "address": "44 Radcliffe Road",
-      "city": "Hartford",
-      "optedin": false
-    },
-    {
-      "id": 4,
-      "name": "Cory Carter",
-      "work": "Polygan",
-      "email": "cory.carter@polygan.club",
-      "dob": "1906",
-      "address": "58 Wooster Road",
-      "city": "Bakersfield",
+      "name": "Heath Rhymer",
+      "work": "SkyCenta",
+      "email": "heath.rhymer@skycenta.com",
+      "dob": "1919",
+      "address": "12 Hunt Street",
+      "city": "Fairfield",
       "optedin": true
     }
   ],
@@ -57,8 +37,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 2.91,
-    "y": 14.59
+    "x": 38.06,
+    "y": -15.38
   },
-  "price": "$37,517"
+  "price": "$55,397"
 }
