@@ -16,3 +16,7 @@
 
 ## Architecture
 ![](./images/01-Architecture.png)
+
+## Demo
+- [Live URL](https://rahulkirangaddam.is-a.dev/generate-json/)
+[Demo](./images/02-Demo.gif)
