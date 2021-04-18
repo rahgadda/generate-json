@@ -660,25 +660,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 56, 8, 1918);
+    			add_location(h1, file, 56, 8, 1930);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 55, 4, 1886);
-    			add_location(button0, file, 59, 8, 2010);
-    			add_location(button1, file, 60, 8, 2072);
+    			add_location(header, file, 55, 4, 1898);
+    			add_location(button0, file, 59, 8, 2022);
+    			add_location(button1, file, 60, 8, 2084);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 58, 4, 1981);
+    			add_location(div0, file, 58, 4, 1993);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 64, 12, 2205);
+    			add_location(textarea, file, 64, 12, 2217);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 63, 8, 2168);
+    			add_location(div1, file, 63, 8, 2180);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 67, 12, 2321);
+    			add_location(pre, file, 67, 12, 2333);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 66, 8, 2283);
+    			add_location(div2, file, 66, 8, 2295);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 62, 4, 2134);
+    			add_location(div3, file, 62, 4, 2146);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 54, 0, 1857);
+    			add_location(main, file, 54, 0, 1869);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -788,8 +788,8 @@ var app = (function () {
 
     	async function refreshJson() {
     		console.log("Refersh JSON ");
-    		$$invalidate(0, inputTemplate = await GitGetData.getBase64Data("data/sample.hbs"));
-    		$$invalidate(1, jsonOutput = await GitGetData.getBase64Data("response/sample.json"));
+    		$$invalidate(0, inputTemplate = await new GitGetData().getBase64Data("data/sample.hbs"));
+    		$$invalidate(1, jsonOutput = await new GitGetData().getBase64Data("response/sample.json"));
     	}
 
     	const writable_props = ["urlCode"];

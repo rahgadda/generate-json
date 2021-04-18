@@ -45,8 +45,8 @@
 
     async function refreshJson() {
         console.log("Refersh JSON ")
-        inputTemplate = await GitGetData.getBase64Data("data/sample.hbs");
-        jsonOutput = await GitGetData.getBase64Data("response/sample.json");
+        inputTemplate = await new GitGetData().getBase64Data("data/sample.hbs");
+        jsonOutput = await new GitGetData().getBase64Data("response/sample.json");
     }
 </script>
 
