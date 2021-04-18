@@ -17,7 +17,12 @@ export default class Fetch{
     async getBase64Data(url) {
   
         // Awaiting for fetch response
-        const response = await fetch(url);
+        const response = await fetch(url,{
+            method:"GET",
+            headers: {
+                'If-None-Match': ''
+            }
+        });
   
         // Awaiting for response.json()
         const data = await response.json();
