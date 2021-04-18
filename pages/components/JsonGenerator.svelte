@@ -22,17 +22,19 @@
             "method": "GET"
         });
         jsonOutput = await response.text();
-        accessToken={$access_token};
+        accessToken=$access_token;
     });
 
     async function saveFile() {
         console.log("Saving File ");
         let response;
-        if (accessToken){
+        if (! accessToken){
+            console.log("Generating Access Token");
             response = await new GitGenerateToken().getToken(urlCode);
             accessToken = await response.access_token;
             access_token.set(accessToken);
         }
+        console.log("Generating SHA Token");
         response = await new GitGenerateSHAToken().getSHAToken(accessToken);
         shaToken = await response;
         let data = {
@@ -43,6 +45,7 @@
             encoding: "base64",
             message: "Updated From UI"
         }
+        console.log("Updating File");
         response = await new GitUploadFile().uploadTemplate(accessToken,data);
     }
 

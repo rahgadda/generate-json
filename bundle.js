@@ -632,25 +632,25 @@ var app = (function () {
     			pre = element("pre");
     			t7 = text(/*jsonOutput*/ ctx[1]);
     			attr_dev(h1, "class", "header-title svelte-11ebzd6");
-    			add_location(h1, file, 65, 8, 2158);
+    			add_location(h1, file, 68, 8, 2293);
     			attr_dev(header, "class", "header svelte-11ebzd6");
-    			add_location(header, file, 64, 4, 2126);
-    			add_location(button0, file, 68, 8, 2250);
-    			add_location(button1, file, 69, 8, 2312);
+    			add_location(header, file, 67, 4, 2261);
+    			add_location(button0, file, 71, 8, 2385);
+    			add_location(button1, file, 72, 8, 2447);
     			attr_dev(div0, "class", "button svelte-11ebzd6");
-    			add_location(div0, file, 67, 4, 2221);
+    			add_location(div0, file, 70, 4, 2356);
     			attr_dev(textarea, "class", "source svelte-11ebzd6");
-    			add_location(textarea, file, 73, 12, 2445);
+    			add_location(textarea, file, 76, 12, 2580);
     			attr_dev(div1, "class", "left-panel svelte-11ebzd6");
-    			add_location(div1, file, 72, 8, 2408);
+    			add_location(div1, file, 75, 8, 2543);
     			attr_dev(pre, "class", "output svelte-11ebzd6");
-    			add_location(pre, file, 76, 12, 2561);
+    			add_location(pre, file, 79, 12, 2696);
     			attr_dev(div2, "class", "right-panel svelte-11ebzd6");
-    			add_location(div2, file, 75, 8, 2523);
+    			add_location(div2, file, 78, 8, 2658);
     			attr_dev(div3, "class", "html-editor svelte-11ebzd6");
-    			add_location(div3, file, 71, 4, 2374);
+    			add_location(div3, file, 74, 4, 2509);
     			attr_dev(main, "class", "container svelte-11ebzd6");
-    			add_location(main, file, 63, 0, 2097);
+    			add_location(main, file, 66, 0, 2232);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -730,19 +730,21 @@ var app = (function () {
     		$$invalidate(0, inputTemplate = await response.text());
     		response = await fetch(gitURL + "response/sample.json", { "method": "GET" });
     		$$invalidate(1, jsonOutput = await response.text());
-    		accessToken = { $access_token };
+    		accessToken = $access_token;
     	});
 
     	async function saveFile() {
     		console.log("Saving File ");
     		let response;
 
-    		if (accessToken) {
+    		if (!accessToken) {
+    			console.log("Generating Access Token");
     			response = await new GitGenerateToken().getToken(urlCode);
     			accessToken = await response.access_token;
     			access_token.set(accessToken);
     		}
 
+    		console.log("Generating SHA Token");
     		response = await new GitGenerateSHAToken().getSHAToken(accessToken);
     		shaToken = await response;
 
@@ -755,6 +757,7 @@ var app = (function () {
     			message: "Updated From UI"
     		};
 
+    		console.log("Updating File");
     		response = await new GitUploadFile().uploadTemplate(accessToken, data);
     	}
 
