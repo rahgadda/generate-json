@@ -23,10 +23,10 @@ export default class Fetch{
         const data = await response.json();
   
         // Getting content
-        const base64Data = await data.content;
+        const base64Data = data.content;
 
         //Decoding Data
-        const resData = await window.atob(base64Data);
+        const resData = window.atob(base64Data);
 
         // Returning result data
         return resData;

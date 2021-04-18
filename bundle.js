@@ -424,10 +424,10 @@ var app = (function () {
             const data = await response.json();
       
             // Getting content
-            const base64Data = await data.content;
+            const base64Data = data.content;
 
             //Decoding Data
-            const resData = await window.atob(base64Data);
+            const resData = window.atob(base64Data);
 
             // Returning result data
             return resData;
@@ -545,7 +545,7 @@ var app = (function () {
     const gitAPIURL$2 = "https://api.github.com/repos/rahgadda/generate-json/contents/";
 
     class GitGetData{
-        getToken(code){
+        getBase64Data(code){
             return (async () => await http$2.getBase64Data(gitAPIURL$2+code) )();
         }
     }
