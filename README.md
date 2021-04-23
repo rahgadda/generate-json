@@ -18,6 +18,7 @@
 ![](./images/01-Architecture.png)
 
 ## Demo
+- [Login Here to Supress CORS](https://cors-anywhere.herokuapp.com/)
 - [Live URL](https://rahulkirangaddam.is-a.dev/generate-json/)
 
 ![Demo](./images/02-Demo.gif)
