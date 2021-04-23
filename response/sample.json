@@ -2,22 +2,32 @@
   "users": [
     {
       "id": 0,
-      "name": "Victoria Kelsey",
-      "work": "FastMart",
-      "email": "victoria.kelsey@fastmart.club",
-      "dob": "1915",
-      "address": "81 Arlington Road",
-      "city": "Dundee",
+      "name": "Tyler Caffey",
+      "work": "DuoServe",
+      "email": "tyler.caffey@duoserve.com",
+      "dob": "1970",
+      "address": "19 Beechmont Parkway",
+      "city": "Vancouver",
       "optedin": false
     },
     {
       "id": 1,
-      "name": "Curtis Rebelo",
-      "work": "MultiLingua",
-      "email": "curtis.rebelo@multilingua.name",
-      "dob": "1921",
-      "address": "73 Alexander Avenue",
-      "city": "Cambridge",
+      "name": "Brian Helland",
+      "work": "Acousticom",
+      "email": "brian.helland@acousticom.mobi",
+      "dob": "1973",
+      "address": "44 Rutland Drive",
+      "city": "Irvine",
+      "optedin": true
+    },
+    {
+      "id": 2,
+      "name": "Dori Hancock",
+      "work": "Xenosys",
+      "email": "dori.hancock@xenosys.edu",
+      "dob": "1988",
+      "address": "70 Fuller Road",
+      "city": "Stafford",
       "optedin": false
     }
   ],
@@ -27,8 +37,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 14.93,
-    "y": -1.61
+    "x": 18.24,
+    "y": -6.47
   },
-  "price": "$97,699"
+  "price": "$21,733"
 }
