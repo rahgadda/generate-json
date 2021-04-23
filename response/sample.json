@@ -2,33 +2,13 @@
   "users": [
     {
       "id": 0,
-      "name": "Tyler Caffey",
-      "work": "DuoServe",
-      "email": "tyler.caffey@duoserve.com",
-      "dob": "1970",
-      "address": "19 Beechmont Parkway",
-      "city": "Vancouver",
-      "optedin": false
-    },
-    {
-      "id": 1,
-      "name": "Brian Helland",
-      "work": "Acousticom",
-      "email": "brian.helland@acousticom.mobi",
-      "dob": "1973",
-      "address": "44 Rutland Drive",
-      "city": "Irvine",
+      "name": "Vernon Mercer",
+      "work": "Cirpria",
+      "email": "vernon.mercer@cirpria.com",
+      "dob": "1947",
+      "address": "82 Rivington Street",
+      "city": "Northampton",
       "optedin": true
-    },
-    {
-      "id": 2,
-      "name": "Dori Hancock",
-      "work": "Xenosys",
-      "email": "dori.hancock@xenosys.edu",
-      "dob": "1988",
-      "address": "70 Fuller Road",
-      "city": "Stafford",
-      "optedin": false
     }
   ],
   "images": [
@@ -37,8 +17,8 @@
     "img2.png"
   ],
   "coordinates": {
-    "x": 18.24,
-    "y": -6.47
+    "x": 30.09,
+    "y": -12.53
   },
-  "price": "$21,733"
+  "price": "$24,345"
 }
